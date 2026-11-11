@@ -1,0 +1,22 @@
+name: Rule idea
+description: A moment where you wished Claude Code had told you something.
+labels: [rule idea]
+body:
+  - type: textarea
+    id: moment
+    attributes:
+      label: The moment
+      description: What were you doing, and what did you find out too late?
+    validations:
+      required: true
+  - type: textarea
+    id: tip
+    attributes:
+      label: The one-line tip you'd want to see
+    validations:
+      required: true
+  - type: textarea
+    id: signal
+    attributes:
+      label: The signal (if you know it)
+      description: Which event or value could detect it? (model, effort, context, tool results, ...)

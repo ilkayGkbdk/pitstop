@@ -1,0 +1,17 @@
+name: New language
+description: Offer or request model-coach tips in another language.
+labels: [language, good first issue]
+body:
+  - type: input
+    id: lang
+    attributes:
+      label: Language
+      placeholder: "German (de)"
+    validations:
+      required: true
+  - type: checkboxes
+    id: who
+    attributes:
+      label: Can you translate it?
+      options:
+        - label: I'll open a PR (see CONTRIBUTING.md → Add a language)

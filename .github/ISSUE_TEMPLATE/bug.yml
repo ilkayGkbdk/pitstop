@@ -1,0 +1,27 @@
+name: Bug report
+description: Something model-coach does wrong, or a tip that is wrong.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      placeholder: "1. /model sonnet with ~80K context\n2. ..."
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: "Claude Code 2.1.322 · model-coach 0.2.0 · macOS / Linux / Windows"
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of /model-coach status
+      render: text

@@ -168,6 +168,18 @@ vhs demo/demo.tape                          # re-record the GIF (demo-tr.tape fo
 Adding a language means adding one table to [`hooks/i18n.ts`](plugins/model-coach/hooks/i18n.ts); the type checker
 lists every string you missed.
 
+## Contributing
+
+pitstop is built to be extended, and most changes are small:
+
+- 🌍 **A new language**: one table in `i18n.ts`, and the type checker lists what's missing
+- 💡 **A rule idea**: tell us the moment you wished Claude Code had warned you ([open one](https://github.com/ilkayGkbdk/pitstop/issues/new?template=rule-idea.yml))
+- 📒 **Catalog updates**: a new model or price is a one-file PR
+- 🧰 **A new mod** for the garage
+
+Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[good first issues](https://github.com/ilkayGkbdk/pitstop/labels/good%20first%20issue).
+
 ## Roadmap
 
 - [x] English and Turkish tips
@@ -176,8 +188,6 @@ lists every string you missed.
 - [ ] More languages (PRs welcome: one table)
 - [ ] Spot batch work that could run at low effort with retries
 - [ ] More mods in the pitstop garage
-
-Ideas and PRs are welcome. Open an issue with the situation where you wished you had been told something.
 
 ## License
 
