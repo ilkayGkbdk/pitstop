@@ -1,5 +1,9 @@
 # Changelog
 
+## model-coach 0.2.1
+
+- The band's `🏁 pitstop` label no longer wraps in narrow terminals.
+
 ## model-coach 0.2.0
 
 - **English and Turkish** tips, status and report. `auto` follows Claude Code's `language` setting, then `LANG`. Switch with `/model-coach lang en|tr|auto` or the `language` option.

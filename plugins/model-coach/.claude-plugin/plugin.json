@@ -1,6 +1,6 @@
 {
   "name": "model-coach",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Watches model, effort and context use and shows one-line tips (English/Turkish) at the right moment.",
   "author": {
     "name": "ilkayGkbdk",

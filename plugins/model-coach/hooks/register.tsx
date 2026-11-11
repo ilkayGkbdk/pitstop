@@ -317,9 +317,11 @@ export const register: Register = (on, options) => {
     const more = list.length > 1 ? ` (+${list.length - 1})` : ''
     return (
       <Box gap={1}>
-        <Text color="warning" bold>
-          🏁 pitstop
-        </Text>
+        <Box flexShrink={0}>
+          <Text color="warning" bold>
+            🏁 pitstop
+          </Text>
+        </Box>
         <Box flexGrow={1} flexShrink={1}>
           <Text>
             {t(lang, head.rule, head.vars)}
