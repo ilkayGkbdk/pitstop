@@ -153,8 +153,8 @@ export const register: Register = on => {
     const { context } = await $.session.usage()
     const firedNow = await read($, fired)
     const lines = [
-      `model-coach: ${(await read($, isEnabled)) ? 'açık' : 'kapalı'}`,
-      `model: ${await $.session.model()} · effort: ${lastEffort ?? '?'} · context: ${context.tokens ?? 0}/${context.window}`,
+      `durum: ${(await read($, isEnabled)) ? 'açık' : 'kapalı'}`,
+      `model: ${await $.session.model()} · effort: ${lastEffort ?? 'henüz istek yok'} · context: ${context.tokens ?? 0}/${context.window}`,
       `tetiklenen kurallar: ${firedNow.length ? firedNow.join(', ') : '—'}`,
       `eşikler: switch>${CONFIG.switchCompactTokens}, lean>${CONFIG.leanContextTokens}, effort>${CONFIG.maxComfortEffort}`,
     ]
@@ -163,17 +163,24 @@ export const register: Register = on => {
 
   on('ui.render', { component: 'AbovePrompt' }, async ($, e, next) => {
     const list = await read($, queue)
-    const head = list[0]
+    // Newest first: the tip about what just happened; older ones wait as (+n).
+    const head = list[list.length - 1]
     if (e.props.hasSurvey || head === undefined || !(await read($, isEnabled))) return next(e)
 
     const { Box, Button, Text } = $.ui.resolve(e)
     const more = list.length > 1 ? ` (+${list.length - 1})` : ''
     return (
-      <Box>
-        <Text color="warning">🏁 pitstop </Text>
-        <Text>{head.text}</Text>
-        <Text dimColor>{more} </Text>
-        <Button key="ok" label="Tamam" onPress={() => update($, queue, q => q.slice(1))} />
+      <Box gap={1}>
+        <Text color="warning" bold>
+          🏁 pitstop
+        </Text>
+        <Box flexGrow={1} flexShrink={1}>
+          <Text>
+            {head.text}
+            <Text dimColor>{more}</Text>
+          </Text>
+        </Box>
+        <Button key="ok" label="Tamam" onPress={() => update($, queue, q => q.slice(0, -1))} />
       </Box>
     )
   })

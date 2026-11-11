@@ -72,5 +72,5 @@ test('/model-coach off silences the band; status reports it', async ($, on) => {
   await ui.unmount()
 
   const status = await $.command.run({ ...RUN, command: 'model-coach', args: 'status' })
-  expect(status.text).toContain('model-coach: kapalı')
+  expect(status.text).toContain('durum: kapalı')
 })

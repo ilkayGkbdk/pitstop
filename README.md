@@ -1,11 +1,36 @@
-# 🏁 pitstop
+<p align="center">
+  <img src="assets/icon.png" width="112" alt="pitstop">
+</p>
 
-Claude Code mods that help you pick the right model, at the right moment.
+<h1 align="center">pitstop</h1>
 
-The first mod, **model-coach**, watches your model, effort and context usage and shows a
-one-line tip above the prompt exactly when it matters (tips are in Turkish for now).
-It's based on Anthropic's guide
-[Which Claude model should you build with?](https://claude.dev/blog/which-claude-model-should-you-build-with/).
+<p align="center">
+  <b>The right Claude model, at the right moment.</b><br>
+  Claude Code mods that coach your model, effort and context use, one line at a time.
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-d97757"></a>
+  <img alt="Claude Code mod" src="https://img.shields.io/badge/Claude%20Code-mod-d97757">
+  <img alt="tests" src="https://img.shields.io/badge/tests-9%20passing-3fb950">
+  <a href="https://github.com/ilkayGkbdk/pitstop/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/ilkayGkbdk/pitstop?style=flat&color=d97757"></a>
+</p>
+
+<p align="center">
+  <img src="demo/demo.gif" alt="model-coach showing a tip above the Claude Code prompt" width="820">
+</p>
+
+## Why
+
+Switching to a smaller model with 120K tokens of context can re-pay the cache write for the
+whole history. Leaving Fable drops the earlier reasoning. `max` effort on a mid-size model
+often costs more than the next model up at `medium`. Subagents without a `model:` line
+quietly run on your most expensive model.
+
+Claude Code already exposes these signals, and **model-coach** puts them in front of you
+the moment they matter: one line above the prompt, at most once per session for each rule.
+The rules come from Anthropic's guide
+[Which Claude model should you build with?](https://claude.dev/blog/which-claude-model-should-you-build-with/)
 
 ## Install
 
@@ -16,33 +41,39 @@ At the prompt of a Claude Code terminal session:
 ```
 
 Answer `y` to add the marketplace, then pick a scope (user scope = every session).
-
 From a shell: `claude plugin install model-coach --marketplace ilkayGkbdk/pitstop`
 
-## model-coach
+> Tips are in Turkish for now. English is next on the [roadmap](#roadmap).
 
-### Layer 1: deterministic tips (band above the prompt)
+## What it watches
 
-| Signal | Tip |
+### Layer 1: deterministic tips (the band above the prompt)
+
+| When | Tip |
 | --- | --- |
-| `/model` switch with context > 50K | Run `/compact` first, since the new model pays cache-write for the whole history (shows the estimated $) |
-| Fable → a lower model | Earlier thinking/reasoning will be dropped |
-| Context > 150K | Keep the main context lean and hand log/file reading to a Haiku subagent |
-| Effort > `high` | Try the next model up at lower effort instead |
-| `.claude/agents/*.md` without `model:` | Add `model: haiku` or `sonnet`, or set `CLAUDE_CODE_SUBAGENT_MODEL` |
+| `/model` switch with context > **50K** | Run `/compact` first, since the new model pays cache-write for the whole history (shows the estimated $) |
+| **Fable** → a lower model | Earlier thinking/reasoning will be dropped |
+| Context > **150K** | Keep the main thread lean and hand log/file reading to a Haiku subagent |
+| Effort above **high** | Try the next model up at lower effort instead |
+| `.claude/agents/*.md` with no `model:` | Add `model: haiku` or `sonnet`, or set `CLAUDE_CODE_SUBAGENT_MODEL` |
 | `Explore` runs on the session model | Define your own Explore with `model: haiku` |
-| `opusplan` active | Code edits run on Sonnet, so measure it on your own work |
-| Automatic fallback to another model | Shows which model it fell back to |
+| `opusplan` is active | Code edits run on Sonnet, so measure it on your own work |
+| Automatic fallback | Shows which model the session fell back to |
 
-Each rule fires **at most once per session** (cooldown; `/clear` resets it).
+Each rule fires **at most once per session**. `/clear` resets the cooldown.
 
 ### Layer 2: routing rules for the model
 
-A short system-prompt section tells Claude to open a reply with a single
-`🏁 pitstop: …` line when the kind of work clearly changes (Haiku for extraction and
-search, Sonnet for well-scoped fixes, Opus medium for everyday engineering, Fable for
-big refactors and orchestration), plus the escalation order: verification path → more
-effort → bigger model at lower effort.
+A short system-prompt section asks Claude to open a reply with a single `🏁 pitstop: …`
+line, and only when the kind of work clearly changes:
+
+- **Haiku 5.5**: classification, routing, extraction, log reading, file search
+- **Sonnet 5.5**: well-scoped bug fixes, features to spec, chat
+- **Opus 5.5 medium**: everyday engineering, multi-PR features
+- **Fable 5.2**: big refactors and migrations, architecture, orchestrating many subagents
+
+When a model falls short, the escalation order is: give it a verification path → raise
+effort one level → move one model up at lower effort.
 
 ### Command
 
@@ -50,20 +81,61 @@ effort → bigger model at lower effort.
 /model-coach on | off | status
 ```
 
-`status` shows the current model, effort, context, the rules that have fired and the thresholds.
+`status` shows the model, effort, context, the rules that have fired, and the thresholds.
 
-### Config
+## Configure
 
-Every threshold lives in [`plugins/model-coach/hooks/config.ts`](plugins/model-coach/hooks/config.ts).
+Every threshold lives in one object,
+[`plugins/model-coach/hooks/config.ts`](plugins/model-coach/hooks/config.ts):
+
+```ts
+export const CONFIG = {
+  switchCompactTokens: 50_000,
+  leanContextTokens: 150_000,
+  maxComfortEffort: 'high',
+  maxQueued: 5,
+  injectRouting: true,
+  agentDirs: ['.claude/agents'],
+}
+```
+
+## How it works
+
+model-coach is a Claude Code mod: a single hooks module, with no
+background process and no network calls.
+
+| Signal | Read from |
+| --- | --- |
+| Model switch, context size, cache cost | `classic.PreModelSwitch` (`context_tokens`, `estimated_cache_write_usd`) |
+| Effort, the model actually sent | `turn.step` on the main loop |
+| Context fill | `$.session.usage()` after each turn |
+| Explore's model | `agent.spawn` result vs. `parentModel` |
+| Fallback | `classic.PostModelSwitch` with `source: 'auto'`, or a step model that differs from the session's |
+
+Two known limits, stated honestly:
+
+- The fallback rule cannot tell a *safety* fallback from other automatic switches.
+- Turning layer 2 off takes effect on the next thread or after `/compact`, because the
+  system prompt stays fixed for a thread to keep the prompt cache.
 
 ## Develop
 
 ```sh
-claude --plugin-dir ./plugins/model-coach      # load from disk, hot-reloads on save
+claude --plugin-dir ./plugins/model-coach   # load from disk; hot-reloads on save
+claude plugin test ./plugins/model-coach    # 9 tests: rules + band + command
 claude plugin validate ./plugins/model-coach
-claude plugin test ./plugins/model-coach
+vhs demo/demo.tape                          # re-record the GIF
 ```
+
+## Roadmap
+
+- [ ] English tips (with a language option)
+- [ ] Per-session cost summary at `/model-coach status`
+- [ ] Spot runs of batch work that could run at low effort with retries
+- [ ] More mods in the pitstop garage
+
+Ideas and PRs are welcome. Open an issue with the situation where you wished you had been told something.
 
 ## License
 
-MIT
+[MIT](LICENSE)

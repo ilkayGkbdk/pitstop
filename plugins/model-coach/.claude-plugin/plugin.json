@@ -1,7 +1,12 @@
 {
   "name": "model-coach",
-  "version": "0.1.0",
-  "description": "Watches model, effort and context use and shows one-line Turkish tips at the right moment.",
-  "types": "./types/index.d.ts",
-  "license": "MIT"
+  "version": "0.1.1",
+  "description": "Watches model, effort and context use and shows one-line tips at the right moment.",
+  "author": { "name": "ilkayGkbdk", "url": "https://github.com/ilkayGkbdk" },
+  "homepage": "https://github.com/ilkayGkbdk/pitstop",
+  "repository": "https://github.com/ilkayGkbdk/pitstop",
+  "license": "MIT",
+  "keywords": ["model", "effort", "context", "cost", "cache", "subagents", "coach"],
+  "icon": "./.claude-plugin/icon.png",
+  "types": "./types/index.d.ts"
 }
