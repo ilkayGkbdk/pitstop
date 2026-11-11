@@ -1,12 +1,48 @@
 {
   "name": "model-coach",
-  "version": "0.1.1",
-  "description": "Watches model, effort and context use and shows one-line tips at the right moment.",
-  "author": { "name": "ilkayGkbdk", "url": "https://github.com/ilkayGkbdk" },
+  "version": "0.2.0",
+  "description": "Watches model, effort and context use and shows one-line tips (English/Turkish) at the right moment.",
+  "author": {
+    "name": "ilkayGkbdk",
+    "url": "https://github.com/ilkayGkbdk"
+  },
   "homepage": "https://github.com/ilkayGkbdk/pitstop",
   "repository": "https://github.com/ilkayGkbdk/pitstop",
   "license": "MIT",
-  "keywords": ["model", "effort", "context", "cost", "cache", "subagents", "coach"],
+  "keywords": [
+    "model",
+    "effort",
+    "context",
+    "cost",
+    "cache",
+    "subagents",
+    "coach"
+  ],
   "icon": "./.claude-plugin/icon.png",
-  "types": "./types/index.d.ts"
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language",
+      "description": "Tip language: auto (Claude Code's language setting, then LANG), en or tr",
+      "default": "auto",
+      "options": [
+        "auto",
+        "en",
+        "tr"
+      ]
+    },
+    "remoteCatalog": {
+      "type": "boolean",
+      "title": "Remote model catalog",
+      "description": "Refresh the model catalog (names, prices) from the pitstop repository at most once a day",
+      "default": true
+    },
+    "injectRouting": {
+      "type": "boolean",
+      "title": "Routing rules",
+      "description": "Add the layer-2 model routing rules to the system prompt",
+      "default": true
+    }
+  }
 }

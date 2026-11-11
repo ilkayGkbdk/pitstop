@@ -1,0 +1,58 @@
+name: catalog-update
+
+# Weekly: list the models the API serves and open a PR for any new Claude
+# model. Needs an ANTHROPIC_API_KEY repository secret; without it the job
+# skips. New entries come with price: null — fill them in before merging.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: List models
+        id: list
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "No ANTHROPIC_API_KEY secret; skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          curl -sSf "https://api.anthropic.com/v1/models?limit=1000" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2026-10-21" \
+            -o "$RUNNER_TEMP/models.json"
+      - name: Merge into catalog
+        if: steps.list.outputs.skip != 'true'
+        run: |
+          node scripts/update-catalog.mjs "$RUNNER_TEMP/models.json"
+          node scripts/build-catalog.mjs
+      - name: Open a pull request
+        if: steps.list.outputs.skip != 'true'
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
+        with:
+          branch: catalog-update
+          commit-message: 'catalog: new models from the Models API'
+          title: 'catalog: new models from the Models API'
+          body: |
+            New Claude models appeared in `GET /v1/models`.
+
+            - [ ] Fill in `price` for every entry marked `needsReview` (list prices from the pricing page), then drop `needsReview`
+            - [ ] Check each family's `latest` and `label`
+            - [ ] `node scripts/build-catalog.mjs`
+
+            Once merged, every installed model-coach picks the new catalog up within a day, with no new release.
+          labels: catalog

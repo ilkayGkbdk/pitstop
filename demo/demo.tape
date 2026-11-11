@@ -9,7 +9,7 @@ Set Height 720
 Set Padding 24
 Set TypingSpeed 60ms
 Hide
-Type "cp ~/.claude/settings.json ~/.claude/settings.json.pitstop-demo && cd demo/project && unset CLAUDE_CODE_CHILD_SESSION && clear && claude --plugin-dir ../../plugins/model-coach --model claude-fable-5-2" Enter
+Type "cp ~/.claude/settings.json ~/.claude/settings.json.pitstop-demo && clear && demo/run.sh en" Enter
 Sleep 6s
 # trust the folder, skip any project MCP prompt
 Down
@@ -25,6 +25,10 @@ Sleep 500ms
 Enter
 Sleep 4s
 Type "/model-coach status"
+Sleep 500ms
+Enter
+Sleep 5s
+Type "/model-coach rules"
 Sleep 500ms
 Enter
 Sleep 5s

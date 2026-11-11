@@ -12,12 +12,15 @@
 <p align="center">
   <a href="LICENSE"><img alt="MIT" src="https://img.shields.io/badge/license-MIT-d97757"></a>
   <img alt="Claude Code mod" src="https://img.shields.io/badge/Claude%20Code-mod-d97757">
-  <img alt="tests" src="https://img.shields.io/badge/tests-9%20passing-3fb950">
+  <a href="https://github.com/ilkayGkbdk/pitstop/actions/workflows/ci.yml"><img alt="ci" src="https://github.com/ilkayGkbdk/pitstop/actions/workflows/ci.yml/badge.svg"></a>
+  <img alt="tests" src="https://img.shields.io/badge/tests-21%20passing-3fb950">
+  <img alt="languages" src="https://img.shields.io/badge/tips-EN%20%7C%20TR-d97757">
   <a href="https://github.com/ilkayGkbdk/pitstop/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/ilkayGkbdk/pitstop?style=flat&color=d97757"></a>
 </p>
 
 <p align="center">
   <img src="demo/demo.gif" alt="model-coach showing a tip above the Claude Code prompt" width="820">
+  <br><sub>English by default · <a href="demo/demo-tr.gif">Türkçe demo</a></sub>
 </p>
 
 ## Why
@@ -43,11 +46,9 @@ At the prompt of a Claude Code terminal session:
 Answer `y` to add the marketplace, then pick a scope (user scope = every session).
 From a shell: `claude plugin install model-coach --marketplace ilkayGkbdk/pitstop`
 
-> Tips are in Turkish for now. English is next on the [roadmap](#roadmap).
-
 ## What it watches
 
-### Layer 1: deterministic tips (the band above the prompt)
+### Layer 1: tips above the prompt
 
 | When | Tip |
 | --- | --- |
@@ -59,62 +60,98 @@ From a shell: `claude plugin install model-coach --marketplace ilkayGkbdk/pitsto
 | `Explore` runs on the session model | Define your own Explore with `model: haiku` |
 | `opusplan` is active | Code edits run on Sonnet, so measure it on your own work |
 | Automatic fallback | Shows which model the session fell back to |
+| **Cache went cold** (idle past its TTL, big context) | The next request re-writes the history anyway, so switching models now costs nothing extra |
+| A rate-limit window ≥ **80%** | Move routine work one model down to stretch it (shows when it resets) |
+| **3 failing tool calls** in a row | The escalation ladder: give it a check → raise effort → move up a model at lower effort |
+| Compaction **≤ 3 turns** away | Forecast from your context growth per turn, so you can `/compact` at a good stopping point |
 
-Each rule fires **at most once per session**. `/clear` resets the cooldown.
+Each rule fires **at most once per session** (`/clear` resets the cooldown). Mute any rule for good with `/model-coach mute <rule>`.
 
 ### Layer 2: routing rules for the model
 
 A short system-prompt section asks Claude to open a reply with a single `🏁 pitstop: …`
-line, and only when the kind of work clearly changes:
+line, in your language, and only when the kind of work clearly changes:
 
-- **Haiku 5.5**: classification, routing, extraction, log reading, file search
-- **Sonnet 5.5**: well-scoped bug fixes, features to spec, chat
-- **Opus 5.5 medium**: everyday engineering, multi-PR features
-- **Fable 5.2**: big refactors and migrations, architecture, orchestrating many subagents
+- **Haiku**: classification, routing, extraction, log reading, file search
+- **Sonnet**: well-scoped bug fixes, features to spec, chat
+- **Opus medium**: everyday engineering, multi-PR features
+- **Fable**: big refactors and migrations, architecture, orchestrating many subagents
 
 When a model falls short, the escalation order is: give it a verification path → raise
 effort one level → move one model up at lower effort.
 
-### Command
+### Pit report
 
 ```
-/model-coach on | off | status
+/model-coach report
 ```
 
-`status` shows the model, effort, context, the rules that have fired, and the thresholds.
+```
+Pit report · session cost $3.42
+  main claude-opus-5-5: 14 turns · in 2.1M · out 48K · cache hit 91% · ~$2.71
+  sub  claude-opus-5-5: 6 turns · in 310K · out 22K · cache hit 64% · ~$0.71
+  Tip: the subagents spent ~$0.71; on Haiku 5.5 it would be ~$0.02 (−$0.69).
+  Costs are estimates from list prices in the catalog.
+```
+
+<sub>Example output. Your numbers come from your own session.</sub>
+
+## A catalog that stays current
+
+Model names, families and list prices live in
+[`catalog.json`](plugins/model-coach/catalog.json), not in the code:
+
+- The mod ships with a bundled copy and refreshes it from this repository **at most once a day**.
+  Nothing about you or your session is sent; it is a plain `GET` of a public file.
+  Turn it off with the `remoteCatalog` option.
+- A weekly GitHub Action lists the models the API serves and **opens a PR** for any new
+  Claude model. Once it's merged, every install picks up the new names within a day,
+  with no new release and no reinstall.
+
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `/model-coach status` | Model, effort, context, language, catalog source, what fired, what's muted |
+| `/model-coach report` | Cost per model, cache hit rate, subagent savings estimate |
+| `/model-coach rules` | Every rule: on/muted, fired this session |
+| `/model-coach mute <rule>` · `unmute <rule>` | Silence one rule across sessions |
+| `/model-coach lang en\|tr\|auto` | Tip language (`auto` follows Claude Code's `language` setting, then `LANG`) |
+| `/model-coach on\|off` | The whole coach |
 
 ## Configure
+
+Options (set in `/config` or at install): `language` (`auto`/`en`/`tr`), `remoteCatalog`, `injectRouting`.
 
 Every threshold lives in one object,
 [`plugins/model-coach/hooks/config.ts`](plugins/model-coach/hooks/config.ts):
 
 ```ts
-export const CONFIG = {
-  switchCompactTokens: 50_000,
-  leanContextTokens: 150_000,
-  maxComfortEffort: 'high',
-  maxQueued: 5,
-  injectRouting: true,
-  agentDirs: ['.claude/agents'],
-}
+switchCompactTokens: 50_000,  leanContextTokens: 150_000,  maxComfortEffort: 'high',
+cacheTtlMs: 5 * 60_000,       rateLimitPercent: 80,        errorStreak: 3,
+compactAtPercent: 90,         forecastTurns: 3,            maxQueued: 5,
 ```
 
 ## How it works
 
-model-coach is a Claude Code mod: a single hooks module, with no
-background process and no network calls.
+model-coach is a Claude Code mod: a single hooks module, with no background process. Its only
+network call is the daily catalog fetch.
 
 | Signal | Read from |
 | --- | --- |
-| Model switch, context size, cache cost | `classic.PreModelSwitch` (`context_tokens`, `estimated_cache_write_usd`) |
+| Model switch, context size, cache cost, cache TTL | `classic.PreModelSwitch` |
 | Effort, the model actually sent | `turn.step` on the main loop |
-| Context fill | `$.session.usage()` after each turn |
+| Context fill, rate limits, session cost | `$.session.usage()` after each turn |
+| Token use per model | `turn.complete` usage, main loop and subagents |
+| Failing tool calls | `tool.call` results |
 | Explore's model | `agent.spawn` result vs. `parentModel` |
 | Fallback | `classic.PostModelSwitch` with `source: 'auto'`, or a step model that differs from the session's |
 
-Two known limits, stated honestly:
+Known limits, stated honestly:
 
 - The fallback rule cannot tell a *safety* fallback from other automatic switches.
+- The compaction forecast assumes compaction at 90% of the window.
+- Report costs are list-price estimates. The session total comes from Claude Code itself.
 - Turning layer 2 off takes effect on the next thread or after `/compact`, because the
   system prompt stays fixed for a thread to keep the prompt cache.
 
@@ -122,16 +159,22 @@ Two known limits, stated honestly:
 
 ```sh
 claude --plugin-dir ./plugins/model-coach   # load from disk; hot-reloads on save
-claude plugin test ./plugins/model-coach    # 9 tests: rules + band + command
+claude plugin test ./plugins/model-coach    # 21 tests: rules, catalog, i18n, report, band, commands
 claude plugin validate ./plugins/model-coach
-vhs demo/demo.tape                          # re-record the GIF
+node scripts/build-catalog.mjs              # after editing catalog.json
+vhs demo/demo.tape                          # re-record the GIF (demo-tr.tape for Turkish)
 ```
+
+Adding a language means adding one table to [`hooks/i18n.ts`](plugins/model-coach/hooks/i18n.ts); the type checker
+lists every string you missed.
 
 ## Roadmap
 
-- [ ] English tips (with a language option)
-- [ ] Per-session cost summary at `/model-coach status`
-- [ ] Spot runs of batch work that could run at low effort with retries
+- [x] English and Turkish tips
+- [x] Pit report and per-rule mute
+- [x] A self-updating model catalog
+- [ ] More languages (PRs welcome: one table)
+- [ ] Spot batch work that could run at low effort with retries
 - [ ] More mods in the pitstop garage
 
 Ideas and PRs are welcome. Open an issue with the situation where you wished you had been told something.
