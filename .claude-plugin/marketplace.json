@@ -1,0 +1,14 @@
+{
+  "name": "pitstop",
+  "description": "Claude Code mods that help you pick the right model at the right moment.",
+  "owner": {
+    "name": "pitstop contributors"
+  },
+  "plugins": [
+    {
+      "name": "model-coach",
+      "source": "./plugins/model-coach",
+      "description": "One-line tips on model, effort and context use, at the right moment."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "model-coach",
+  "version": "0.1.0",
+  "description": "Watches model, effort and context use and shows one-line Turkish tips at the right moment.",
+  "types": "./types/index.d.ts",
+  "license": "MIT"
+}
