@@ -20,7 +20,7 @@
 
 <p align="center">
   <img src="demo/demo.gif" alt="model-coach showing a tip above the Claude Code prompt" width="820">
-  <br><sub>English by default · <a href="demo/demo-tr.gif">Türkçe demo</a></sub>
+  <br><sub>▶ <a href="demo/walkthrough.mp4"><b>Watch the 50-second walkthrough</b></a> (real turns: failing tests, a model switch, the pit report) · <a href="demo/demo-tr.gif">Türkçe demo</a></sub>
 </p>
 
 ## Why

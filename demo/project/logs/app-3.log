@@ -1,0 +1,640 @@
+2026-11-10T08:18:32.687Z INFO  [billing] req=f10c0ee7a980 request completed status=200 path=/v1/orders duration_ms=3809
+2026-11-10T08:18:33.458Z INFO  [api] req=6d40c376edcb cache hit key=user:76229 ttl=300
+2026-11-10T08:18:33.951Z INFO  [api] req=f8cda8207719 request completed status=200 path=/v1/orders duration_ms=2073
+2026-11-10T08:18:34.211Z INFO  [api] req=a1106c4d9932 request completed status=200 path=/v1/orders duration_ms=737
+2026-11-10T08:18:34.617Z INFO  [billing] req=5260f89dcd9c request completed status=200 path=/v1/orders duration_ms=2224
+2026-11-10T08:18:34.846Z INFO  [api] req=60bde45a56c3 request completed status=200 path=/v1/orders duration_ms=819
+2026-11-10T08:18:34.911Z INFO  [auth] req=cb8b1096d837 request completed status=200 path=/v1/orders duration_ms=3427
+2026-11-10T08:18:35.653Z INFO  [auth] req=d92526fe8152 cache hit key=user:7080 ttl=300
+2026-11-10T08:18:35.874Z INFO  [search] req=f245f01317c1 cache hit key=user:23087 ttl=300
+2026-11-10T08:18:36.479Z INFO  [worker] req=6bf479a9fe06 request completed status=200 path=/v1/orders duration_ms=1025
+2026-11-10T08:18:37.285Z WARN  [billing] req=0dc426167185 slow query table=orders duration_ms=1965 rows=22001
+2026-11-10T08:18:38.128Z INFO  [auth] req=036125bd3eeb request completed status=200 path=/v1/orders duration_ms=3806
+2026-11-10T08:18:38.554Z WARN  [search] req=98bccf2abcc6 slow query table=orders duration_ms=3032 rows=29727
+2026-11-10T08:18:39.437Z INFO  [auth] req=0df14023974b cache hit key=user:94439 ttl=300
+2026-11-10T08:18:40.218Z INFO  [auth] req=55d78f68d1a1 request completed status=200 path=/v1/orders duration_ms=1296
+2026-11-10T08:18:41.007Z INFO  [api] req=3626d47d5c1d job finished queue=emails processed=12803
+2026-11-10T08:18:41.127Z INFO  [billing] req=577e380a3d7c request completed status=200 path=/v1/orders duration_ms=3135
+2026-11-10T08:18:41.888Z INFO  [worker] req=e9caf026ff84 request completed status=200 path=/v1/orders duration_ms=625
+2026-11-10T08:18:42.119Z INFO  [billing] req=bc689bde94d3 cache hit key=user:67118 ttl=300
+2026-11-10T08:18:42.500Z ERROR [billing] req=6a1050a4c4df db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:18:42.706Z DEBUG [billing] req=ddd3cffff1f9 feature flag evaluated flag=new_checkout user=12000 value=false
+2026-11-10T08:18:43.523Z INFO  [search] req=eeda83a763e5 request completed status=200 path=/v1/orders duration_ms=68
+2026-11-10T08:18:43.953Z INFO  [billing] req=617e7d7b17cf cache hit key=user:27445 ttl=300
+2026-11-10T08:18:44.152Z ERROR [search] req=058c5e41df42 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:18:44.511Z WARN  [auth] req=1d7fa39b261d slow query table=orders duration_ms=3958 rows=5082
+2026-11-10T08:18:44.996Z INFO  [auth] req=d409c1aa3189 cache hit key=user:64044 ttl=300
+2026-11-10T08:18:45.717Z INFO  [search] req=54403ab344ba request completed status=200 path=/v1/orders duration_ms=2069
+2026-11-10T08:18:46.428Z INFO  [worker] req=b605ef938c4d request completed status=200 path=/v1/orders duration_ms=454
+2026-11-10T08:18:46.534Z INFO  [search] req=c44aeda99f49 request completed status=200 path=/v1/orders duration_ms=3883
+2026-11-10T08:18:46.766Z INFO  [search] req=f18750504384 cache hit key=user:46225 ttl=300
+2026-11-10T08:18:47.088Z INFO  [search] req=6c569533631b request completed status=200 path=/v1/orders duration_ms=2661
+2026-11-10T08:18:47.772Z INFO  [worker] req=4a9988ccf3a2 job finished queue=emails processed=70359
+2026-11-10T08:18:48.660Z ERROR [billing] req=31be77ba24b0 db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:18:49.309Z INFO  [api] req=ad3159386938 cache hit key=user:52559 ttl=300
+2026-11-10T08:18:49.765Z INFO  [search] req=b61146649c7e cache hit key=user:4649 ttl=300
+2026-11-10T08:18:50.345Z INFO  [api] req=a287c01b6fdc request completed status=200 path=/v1/orders duration_ms=2064
+2026-11-10T08:18:50.669Z INFO  [auth] req=4e02bef7ed86 request completed status=200 path=/v1/orders duration_ms=1469
+2026-11-10T08:18:51.315Z DEBUG [search] req=8bc820167cc0 feature flag evaluated flag=new_checkout user=27498 value=false
+2026-11-10T08:18:52.035Z ERROR [api] req=72479704d06f payment webhook timeout provider=stripe after_ms=1010
+2026-11-10T08:18:52.886Z INFO  [auth] req=8c94965902fb request completed status=200 path=/v1/orders duration_ms=152
+2026-11-10T08:18:53.015Z INFO  [search] req=c0eac9079d7d request completed status=200 path=/v1/orders duration_ms=363
+2026-11-10T08:18:53.520Z DEBUG [worker] req=ccc63f3e5ac3 feature flag evaluated flag=new_checkout user=76861 value=false
+2026-11-10T08:18:53.655Z ERROR [api] req=c4f4c6c0c351 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:18:54.432Z DEBUG [billing] req=76e2ff12d5db feature flag evaluated flag=new_checkout user=68771 value=false
+2026-11-10T08:18:55.050Z INFO  [api] req=3ba810d01d20 request completed status=200 path=/v1/orders duration_ms=3500
+2026-11-10T08:18:55.200Z ERROR [auth] req=c08a3076c9e5 db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:18:56.021Z INFO  [billing] req=f7ea088aac12 request completed status=200 path=/v1/orders duration_ms=3093
+2026-11-10T08:18:56.261Z ERROR [worker] req=e9a83f7eaf3e db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:18:56.365Z INFO  [api] req=bfc5ba5fd863 request completed status=200 path=/v1/orders duration_ms=446
+2026-11-10T08:18:57.056Z INFO  [api] req=bb19952231c0 request completed status=200 path=/v1/orders duration_ms=2716
+2026-11-10T08:18:57.616Z INFO  [api] req=6836d39e8dc2 request completed status=200 path=/v1/orders duration_ms=218
+2026-11-10T08:18:57.844Z ERROR [api] req=a1df0a6db0b4 payment webhook timeout provider=stripe after_ms=1491
+2026-11-10T08:18:58.026Z ERROR [search] req=fed04439e162 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:18:58.856Z INFO  [api] req=ab2fc818d93a cache hit key=user:89594 ttl=300
+2026-11-10T08:18:59.504Z DEBUG [auth] req=e6e7d1eae817 feature flag evaluated flag=new_checkout user=38961 value=false
+2026-11-10T08:19:00.110Z INFO  [worker] req=620d05828991 request completed status=200 path=/v1/orders duration_ms=2385
+2026-11-10T08:19:00.549Z INFO  [auth] req=796674529ede request completed status=200 path=/v1/orders duration_ms=578
+2026-11-10T08:19:01.298Z INFO  [worker] req=90412c39f640 job finished queue=emails processed=37066
+2026-11-10T08:19:02.092Z INFO  [api] req=c502ce8c5ba4 request completed status=200 path=/v1/orders duration_ms=852
+2026-11-10T08:19:02.333Z INFO  [search] req=e3c43274ddc0 cache hit key=user:77476 ttl=300
+2026-11-10T08:19:03.125Z INFO  [search] req=6cf61b766b9e request completed status=200 path=/v1/orders duration_ms=43
+2026-11-10T08:19:03.589Z INFO  [auth] req=8dc3f6322186 cache hit key=user:24630 ttl=300
+2026-11-10T08:19:03.664Z INFO  [auth] req=7fccdf43e9f6 cache hit key=user:66179 ttl=300
+2026-11-10T08:19:04.094Z ERROR [api] req=7d97372ccd05 db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:19:04.347Z INFO  [auth] req=28b57124efaa cache hit key=user:24365 ttl=300
+2026-11-10T08:19:05.027Z INFO  [api] req=5e7dfa2c4040 request completed status=200 path=/v1/orders duration_ms=2612
+2026-11-10T08:19:05.185Z INFO  [search] req=a4db34adb321 job finished queue=emails processed=55974
+2026-11-10T08:19:05.695Z WARN  [search] req=6ae5396b7640 slow query table=orders duration_ms=3270 rows=84402
+2026-11-10T08:19:06.053Z INFO  [search] req=b169aeb0c267 request completed status=200 path=/v1/orders duration_ms=1912
+2026-11-10T08:19:06.166Z INFO  [api] req=697fbbd9cb92 cache hit key=user:50046 ttl=300
+2026-11-10T08:19:06.658Z INFO  [search] req=f9ebe3ecd134 request completed status=200 path=/v1/orders duration_ms=1028
+2026-11-10T08:19:07.134Z ERROR [billing] req=2cbad9ca27cc db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:19:07.489Z ERROR [billing] req=ea17864d90a7 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:19:08.331Z INFO  [auth] req=08a63c50c0f8 request completed status=200 path=/v1/orders duration_ms=1912
+2026-11-10T08:19:08.645Z INFO  [auth] req=4e5733d4c612 cache hit key=user:18020 ttl=300
+2026-11-10T08:19:09.516Z INFO  [billing] req=0d1dbabec9df cache hit key=user:2763 ttl=300
+2026-11-10T08:19:10.005Z WARN  [api] req=782479b63dd9 slow query table=orders duration_ms=1754 rows=35239
+2026-11-10T08:19:10.250Z INFO  [search] req=6dd2fe4ad1d2 cache hit key=user:87151 ttl=300
+2026-11-10T08:19:10.815Z WARN  [billing] req=7d5a294f30f7 slow query table=orders duration_ms=1254 rows=90744
+2026-11-10T08:19:11.000Z INFO  [billing] req=31d59ed4e921 request completed status=200 path=/v1/orders duration_ms=3096
+2026-11-10T08:19:11.555Z INFO  [search] req=9b264a593547 request completed status=200 path=/v1/orders duration_ms=3880
+2026-11-10T08:19:12.216Z INFO  [billing] req=e5d23cef70c4 request completed status=200 path=/v1/orders duration_ms=2737
+2026-11-10T08:19:12.939Z DEBUG [billing] req=932d44dc335d feature flag evaluated flag=new_checkout user=94556 value=false
+2026-11-10T08:19:13.616Z INFO  [worker] req=64cec86da063 cache hit key=user:33353 ttl=300
+2026-11-10T08:19:14.295Z INFO  [search] req=d990f769c767 cache hit key=user:59724 ttl=300
+2026-11-10T08:19:14.537Z ERROR [auth] req=9d723394410a db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:19:14.746Z INFO  [api] req=4c8b7a191915 cache hit key=user:66641 ttl=300
+2026-11-10T08:19:14.998Z INFO  [search] req=d59b5a6d9c97 job finished queue=emails processed=78566
+2026-11-10T08:19:15.169Z ERROR [worker] req=8a1308d8f1d5 payment webhook timeout provider=stripe after_ms=11
+2026-11-10T08:19:15.881Z INFO  [auth] req=d90d83038b5c request completed status=200 path=/v1/orders duration_ms=755
+2026-11-10T08:19:16.029Z INFO  [api] req=ded4abb3e5fd request completed status=200 path=/v1/orders duration_ms=996
+2026-11-10T08:19:16.579Z INFO  [worker] req=5d5599dd30ad job finished queue=emails processed=6188
+2026-11-10T08:19:16.949Z DEBUG [worker] req=b3774ceb3215 feature flag evaluated flag=new_checkout user=33626 value=false
+2026-11-10T08:19:17.086Z INFO  [auth] req=b69ad4f60521 job finished queue=emails processed=94276
+2026-11-10T08:19:17.149Z INFO  [worker] req=fa8971e22c3f request completed status=200 path=/v1/orders duration_ms=2467
+2026-11-10T08:19:17.798Z ERROR [api] req=398dcca5801e db connection refused host=pg-primary:5432 retry=4/5
+2026-11-10T08:19:18.568Z INFO  [api] req=e68fa2d71671 request completed status=200 path=/v1/orders duration_ms=602
+2026-11-10T08:19:18.676Z INFO  [search] req=4a106b5377f5 cache hit key=user:49109 ttl=300
+2026-11-10T08:19:19.387Z INFO  [worker] req=69f4679f17d1 request completed status=200 path=/v1/orders duration_ms=3567
+2026-11-10T08:19:19.549Z INFO  [api] req=bb38712f665a request completed status=200 path=/v1/orders duration_ms=3849
+2026-11-10T08:19:19.783Z INFO  [api] req=b0c66d8f02ae request completed status=200 path=/v1/orders duration_ms=1372
+2026-11-10T08:19:20.515Z WARN  [auth] req=7bcbae6728bf slow query table=orders duration_ms=1351 rows=25543
+2026-11-10T08:19:21.234Z INFO  [auth] req=92490c2f3792 job finished queue=emails processed=28722
+2026-11-10T08:19:22.020Z INFO  [search] req=6531b8373c78 request completed status=200 path=/v1/orders duration_ms=1501
+2026-11-10T08:19:22.838Z ERROR [search] req=ed741127c3ed db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:19:23.058Z DEBUG [worker] req=388eab2dfb8a feature flag evaluated flag=new_checkout user=42875 value=false
+2026-11-10T08:19:23.348Z INFO  [auth] req=3c3a413613d8 request completed status=200 path=/v1/orders duration_ms=2057
+2026-11-10T08:19:23.727Z ERROR [billing] req=01c2a8030906 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:19:24.264Z INFO  [worker] req=6ccaf1ff876a request completed status=200 path=/v1/orders duration_ms=3755
+2026-11-10T08:19:24.371Z INFO  [worker] req=1da90d148fa2 cache hit key=user:17650 ttl=300
+2026-11-10T08:19:24.747Z DEBUG [billing] req=db01f1b9a83f feature flag evaluated flag=new_checkout user=31687 value=false
+2026-11-10T08:19:24.814Z INFO  [api] req=ba26981adaec job finished queue=emails processed=71177
+2026-11-10T08:19:24.894Z INFO  [worker] req=1db2cb9c15fa cache hit key=user:24079 ttl=300
+2026-11-10T08:19:25.422Z WARN  [worker] req=07d54ab7de1f slow query table=orders duration_ms=1306 rows=92431
+2026-11-10T08:19:26.290Z INFO  [search] req=4ed4b651772c request completed status=200 path=/v1/orders duration_ms=245
+2026-11-10T08:19:26.750Z INFO  [api] req=b2f19ee106d0 cache hit key=user:94440 ttl=300
+2026-11-10T08:19:27.381Z INFO  [worker] req=be4c79cd98d0 request completed status=200 path=/v1/orders duration_ms=2666
+2026-11-10T08:19:27.759Z INFO  [billing] req=6e01f30666de request completed status=200 path=/v1/orders duration_ms=3034
+2026-11-10T08:19:27.926Z DEBUG [api] req=66b70df31314 feature flag evaluated flag=new_checkout user=31143 value=false
+2026-11-10T08:19:28.035Z INFO  [billing] req=cf30a8541a20 request completed status=200 path=/v1/orders duration_ms=2111
+2026-11-10T08:19:28.801Z INFO  [api] req=a216de82e1c0 request completed status=200 path=/v1/orders duration_ms=338
+2026-11-10T08:19:29.182Z INFO  [worker] req=041e33e6c48c cache hit key=user:15416 ttl=300
+2026-11-10T08:19:30.047Z ERROR [auth] req=d0f9aef69d48 payment webhook timeout provider=stripe after_ms=2751
+2026-11-10T08:19:30.515Z INFO  [billing] req=cf7ebdc4f087 request completed status=200 path=/v1/orders duration_ms=381
+2026-11-10T08:19:30.850Z INFO  [search] req=fa96c53b66ee job finished queue=emails processed=85603
+2026-11-10T08:19:31.652Z WARN  [worker] req=1d1bfddec84f slow query table=orders duration_ms=1969 rows=88299
+2026-11-10T08:19:32.115Z WARN  [worker] req=5e4da4046613 slow query table=orders duration_ms=3384 rows=54180
+2026-11-10T08:19:32.925Z INFO  [worker] req=a4caafdec601 cache hit key=user:6121 ttl=300
+2026-11-10T08:19:32.994Z INFO  [search] req=88ded4d57ecc cache hit key=user:41609 ttl=300
+2026-11-10T08:19:33.780Z INFO  [auth] req=0148d9ccfcf8 cache hit key=user:10641 ttl=300
+2026-11-10T08:19:34.063Z INFO  [worker] req=4912872932a7 request completed status=200 path=/v1/orders duration_ms=3854
+2026-11-10T08:19:34.826Z INFO  [api] req=d92d4f25af0d request completed status=200 path=/v1/orders duration_ms=1402
+2026-11-10T08:19:35.314Z ERROR [auth] req=4aad4ea37ecd payment webhook timeout provider=stripe after_ms=2731
+2026-11-10T08:19:35.869Z INFO  [billing] req=511e53623bfb cache hit key=user:60374 ttl=300
+2026-11-10T08:19:36.459Z INFO  [api] req=895a1b76c8ca request completed status=200 path=/v1/orders duration_ms=3575
+2026-11-10T08:19:36.704Z INFO  [billing] req=0ece3b2efafa cache hit key=user:38771 ttl=300
+2026-11-10T08:19:37.250Z WARN  [billing] req=611f3cad27cb slow query table=orders duration_ms=1315 rows=8151
+2026-11-10T08:19:37.756Z INFO  [billing] req=dc15c9204ffe request completed status=200 path=/v1/orders duration_ms=3816
+2026-11-10T08:19:38.301Z INFO  [billing] req=7a919a961d93 job finished queue=emails processed=3368
+2026-11-10T08:19:38.599Z INFO  [worker] req=d372eb85ebc9 cache hit key=user:41783 ttl=300
+2026-11-10T08:19:39.470Z INFO  [worker] req=b3d194bd3f79 job finished queue=emails processed=59001
+2026-11-10T08:19:39.789Z INFO  [billing] req=72b88610eecf cache hit key=user:53382 ttl=300
+2026-11-10T08:19:40.324Z INFO  [billing] req=cd804c897209 request completed status=200 path=/v1/orders duration_ms=629
+2026-11-10T08:19:40.537Z INFO  [api] req=2ffdaf4a040a cache hit key=user:76447 ttl=300
+2026-11-10T08:19:41.117Z DEBUG [auth] req=d230123d4edb feature flag evaluated flag=new_checkout user=23557 value=false
+2026-11-10T08:19:41.548Z INFO  [search] req=ae3baf580d62 request completed status=200 path=/v1/orders duration_ms=3268
+2026-11-10T08:19:42.438Z INFO  [search] req=f60fe9ffb904 request completed status=200 path=/v1/orders duration_ms=3463
+2026-11-10T08:19:43.201Z INFO  [auth] req=707025522d86 job finished queue=emails processed=41682
+2026-11-10T08:19:43.894Z WARN  [api] req=31852eda0f1b slow query table=orders duration_ms=2443 rows=36384
+2026-11-10T08:19:44.025Z ERROR [worker] req=15e865de49e8 db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:19:44.665Z INFO  [auth] req=5b82214f85ff job finished queue=emails processed=28737
+2026-11-10T08:19:44.742Z INFO  [auth] req=455ee5570940 request completed status=200 path=/v1/orders duration_ms=780
+2026-11-10T08:19:45.067Z INFO  [worker] req=0a9af22b43ef request completed status=200 path=/v1/orders duration_ms=3013
+2026-11-10T08:19:45.765Z WARN  [api] req=4f5b56ed995c slow query table=orders duration_ms=1951 rows=11676
+2026-11-10T08:19:45.974Z INFO  [api] req=9dee4f022829 cache hit key=user:72913 ttl=300
+2026-11-10T08:19:46.655Z ERROR [billing] req=163b428e44c7 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:19:46.914Z WARN  [auth] req=e3fb62e51f2c slow query table=orders duration_ms=2997 rows=91354
+2026-11-10T08:19:47.409Z INFO  [auth] req=efae998e36d4 request completed status=200 path=/v1/orders duration_ms=536
+2026-11-10T08:19:48.077Z INFO  [auth] req=88e899dbf760 request completed status=200 path=/v1/orders duration_ms=864
+2026-11-10T08:19:48.942Z INFO  [worker] req=cdfc5e490519 cache hit key=user:48145 ttl=300
+2026-11-10T08:19:49.215Z INFO  [billing] req=c0ffb7bcf473 request completed status=200 path=/v1/orders duration_ms=3184
+2026-11-10T08:19:49.513Z ERROR [api] req=6d22982a764f db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:19:50.355Z WARN  [billing] req=77026fd790e4 slow query table=orders duration_ms=2221 rows=19764
+2026-11-10T08:19:50.849Z WARN  [worker] req=26faed2d275a slow query table=orders duration_ms=2054 rows=28949
+2026-11-10T08:19:51.689Z INFO  [api] req=92b210753c51 job finished queue=emails processed=53891
+2026-11-10T08:19:51.770Z INFO  [worker] req=ac9ca681da2f job finished queue=emails processed=8556
+2026-11-10T08:19:52.112Z INFO  [worker] req=21719f02965f request completed status=200 path=/v1/orders duration_ms=3244
+2026-11-10T08:19:52.482Z ERROR [worker] req=81da95292dfb payment webhook timeout provider=stripe after_ms=3896
+2026-11-10T08:19:52.576Z INFO  [billing] req=896fda4c19ff request completed status=200 path=/v1/orders duration_ms=1776
+2026-11-10T08:19:53.222Z INFO  [worker] req=59c420c66308 request completed status=200 path=/v1/orders duration_ms=2165
+2026-11-10T08:19:53.958Z INFO  [api] req=13680b702da0 request completed status=200 path=/v1/orders duration_ms=601
+2026-11-10T08:19:54.189Z WARN  [api] req=acdfa5f2feda slow query table=orders duration_ms=1437 rows=29017
+2026-11-10T08:19:54.717Z INFO  [worker] req=64e3f1d37d17 request completed status=200 path=/v1/orders duration_ms=3663
+2026-11-10T08:19:54.969Z INFO  [billing] req=98a22406a9fb request completed status=200 path=/v1/orders duration_ms=1880
+2026-11-10T08:19:55.103Z INFO  [auth] req=35206d6e59fa request completed status=200 path=/v1/orders duration_ms=1396
+2026-11-10T08:19:55.658Z INFO  [auth] req=2f408792183c cache hit key=user:71982 ttl=300
+2026-11-10T08:19:56.014Z INFO  [worker] req=487ce8f6c9b0 request completed status=200 path=/v1/orders duration_ms=3862
+2026-11-10T08:19:56.366Z INFO  [api] req=170751b54dc3 request completed status=200 path=/v1/orders duration_ms=3837
+2026-11-10T08:19:56.676Z INFO  [billing] req=ba7b5e89cd3f cache hit key=user:6095 ttl=300
+2026-11-10T08:19:57.463Z INFO  [billing] req=2d6a4bf74f6b cache hit key=user:25193 ttl=300
+2026-11-10T08:19:57.825Z INFO  [worker] req=7866c7080be4 request completed status=200 path=/v1/orders duration_ms=1779
+2026-11-10T08:19:58.446Z ERROR [search] req=c344f8eae3b2 payment webhook timeout provider=stripe after_ms=2982
+2026-11-10T08:19:59.340Z ERROR [api] req=cc38aa309951 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:19:59.400Z INFO  [auth] req=67a97f0a542c request completed status=200 path=/v1/orders duration_ms=2282
+2026-11-10T08:20:00.057Z INFO  [api] req=648de1421290 job finished queue=emails processed=39615
+2026-11-10T08:20:00.634Z INFO  [worker] req=2418c59dfc07 request completed status=200 path=/v1/orders duration_ms=945
+2026-11-10T08:20:01.516Z INFO  [billing] req=5e46bff10356 request completed status=200 path=/v1/orders duration_ms=3282
+2026-11-10T08:20:01.901Z WARN  [auth] req=9ae98e56dbd6 slow query table=orders duration_ms=3549 rows=86711
+2026-11-10T08:20:02.285Z INFO  [search] req=aae98e6d5f69 request completed status=200 path=/v1/orders duration_ms=945
+2026-11-10T08:20:02.408Z INFO  [api] req=e3898eaee160 request completed status=200 path=/v1/orders duration_ms=1271
+2026-11-10T08:20:03.065Z INFO  [billing] req=3dc26834e8c1 request completed status=200 path=/v1/orders duration_ms=85
+2026-11-10T08:20:03.399Z INFO  [billing] req=1ed155b545b2 cache hit key=user:91327 ttl=300
+2026-11-10T08:20:03.716Z INFO  [api] req=bb0b67badc8e cache hit key=user:51321 ttl=300
+2026-11-10T08:20:04.145Z INFO  [auth] req=178b54e187cd cache hit key=user:39345 ttl=300
+2026-11-10T08:20:04.232Z INFO  [search] req=9fe60e2068ea cache hit key=user:37531 ttl=300
+2026-11-10T08:20:04.363Z INFO  [billing] req=307d08546807 cache hit key=user:71375 ttl=300
+2026-11-10T08:20:04.440Z WARN  [search] req=99fb426889d6 slow query table=orders duration_ms=1951 rows=27657
+2026-11-10T08:20:04.898Z WARN  [auth] req=94cd6b3ed687 slow query table=orders duration_ms=2368 rows=53464
+2026-11-10T08:20:05.468Z INFO  [worker] req=48eafb491238 request completed status=200 path=/v1/orders duration_ms=1748
+2026-11-10T08:20:05.695Z INFO  [billing] req=ca86e091a8a1 job finished queue=emails processed=55594
+2026-11-10T08:20:05.864Z INFO  [billing] req=338d423677cd request completed status=200 path=/v1/orders duration_ms=371
+2026-11-10T08:20:06.396Z DEBUG [auth] req=4188ab7c2d0c feature flag evaluated flag=new_checkout user=16970 value=false
+2026-11-10T08:20:07.041Z ERROR [api] req=d7b2c14507f1 payment webhook timeout provider=stripe after_ms=2441
+2026-11-10T08:20:07.886Z INFO  [auth] req=f84d56e05d56 cache hit key=user:58952 ttl=300
+2026-11-10T08:20:07.953Z INFO  [worker] req=66f85a3c10a0 request completed status=200 path=/v1/orders duration_ms=3763
+2026-11-10T08:20:08.415Z INFO  [auth] req=03a79af2fbd8 request completed status=200 path=/v1/orders duration_ms=89
+2026-11-10T08:20:09.193Z INFO  [billing] req=64d238e1ecf1 request completed status=200 path=/v1/orders duration_ms=1784
+2026-11-10T08:20:09.484Z WARN  [worker] req=5e0db386b84f slow query table=orders duration_ms=2857 rows=14076
+2026-11-10T08:20:09.823Z INFO  [auth] req=4d9b8bf2b282 job finished queue=emails processed=16250
+2026-11-10T08:20:10.532Z INFO  [billing] req=5022b917c1f5 cache hit key=user:10624 ttl=300
+2026-11-10T08:20:11.412Z INFO  [worker] req=c5d702619bd2 cache hit key=user:15906 ttl=300
+2026-11-10T08:20:11.605Z INFO  [worker] req=f5f90923bf56 cache hit key=user:41786 ttl=300
+2026-11-10T08:20:12.191Z INFO  [api] req=4d86e4e8dcaa cache hit key=user:29591 ttl=300
+2026-11-10T08:20:12.621Z DEBUG [api] req=b36d53dfd366 feature flag evaluated flag=new_checkout user=24788 value=false
+2026-11-10T08:20:13.504Z INFO  [worker] req=85dd24ca2565 request completed status=200 path=/v1/orders duration_ms=3657
+2026-11-10T08:20:13.772Z INFO  [billing] req=e5e485804ca9 request completed status=200 path=/v1/orders duration_ms=1828
+2026-11-10T08:20:14.508Z ERROR [auth] req=928003037b3c db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:20:14.715Z ERROR [auth] req=c9864ed41bc4 db connection refused host=pg-primary:5432 retry=4/5
+2026-11-10T08:20:15.237Z ERROR [api] req=0a99eada293a db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:20:15.944Z ERROR [api] req=e10caa16a135 db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:20:16.085Z INFO  [auth] req=e2d02538913a request completed status=200 path=/v1/orders duration_ms=2511
+2026-11-10T08:20:16.229Z INFO  [worker] req=89c377074744 cache hit key=user:48602 ttl=300
+2026-11-10T08:20:17.075Z INFO  [search] req=c5a4b2af5cfb cache hit key=user:27170 ttl=300
+2026-11-10T08:20:17.700Z INFO  [auth] req=72ee0a6a074b request completed status=200 path=/v1/orders duration_ms=847
+2026-11-10T08:20:17.832Z INFO  [search] req=198d7beb56e6 cache hit key=user:75343 ttl=300
+2026-11-10T08:20:18.585Z INFO  [worker] req=f24cba23f4bf request completed status=200 path=/v1/orders duration_ms=1111
+2026-11-10T08:20:19.229Z INFO  [api] req=db569e39e27d request completed status=200 path=/v1/orders duration_ms=3333
+2026-11-10T08:20:19.391Z INFO  [api] req=1946f43f9723 request completed status=200 path=/v1/orders duration_ms=2396
+2026-11-10T08:20:19.839Z INFO  [auth] req=423108617ac3 cache hit key=user:59215 ttl=300
+2026-11-10T08:20:20.145Z ERROR [api] req=de4cebe02f6c db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:20:21.008Z INFO  [api] req=5fbb06841caf job finished queue=emails processed=90770
+2026-11-10T08:20:21.510Z INFO  [search] req=092261793a33 job finished queue=emails processed=2920
+2026-11-10T08:20:22.279Z DEBUG [api] req=018ff2a5afcf feature flag evaluated flag=new_checkout user=41151 value=false
+2026-11-10T08:20:22.404Z ERROR [search] req=66e08bc085be db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:20:23.156Z INFO  [auth] req=32b3bfbf7806 request completed status=200 path=/v1/orders duration_ms=1834
+2026-11-10T08:20:23.501Z INFO  [billing] req=64bc4894e7b6 cache hit key=user:15464 ttl=300
+2026-11-10T08:20:24.345Z INFO  [api] req=320f5b5fe2c8 request completed status=200 path=/v1/orders duration_ms=3667
+2026-11-10T08:20:24.614Z INFO  [billing] req=8ccf75f92e85 cache hit key=user:10362 ttl=300
+2026-11-10T08:20:25.319Z INFO  [billing] req=f410e0928710 cache hit key=user:63766 ttl=300
+2026-11-10T08:20:25.946Z INFO  [worker] req=f817149fcd51 request completed status=200 path=/v1/orders duration_ms=1154
+2026-11-10T08:20:26.007Z ERROR [worker] req=c7a19705f356 payment webhook timeout provider=stripe after_ms=1844
+2026-11-10T08:20:26.528Z INFO  [search] req=d974e1b81d65 cache hit key=user:90784 ttl=300
+2026-11-10T08:20:26.970Z ERROR [auth] req=df6018891d81 payment webhook timeout provider=stripe after_ms=3811
+2026-11-10T08:20:27.528Z INFO  [billing] req=cf4249488ea8 request completed status=200 path=/v1/orders duration_ms=3246
+2026-11-10T08:20:27.645Z INFO  [worker] req=f19e2050e990 cache hit key=user:7646 ttl=300
+2026-11-10T08:20:28.013Z INFO  [worker] req=e74608068c8b request completed status=200 path=/v1/orders duration_ms=2824
+2026-11-10T08:20:28.648Z INFO  [search] req=b17f3cab6cf5 cache hit key=user:73543 ttl=300
+2026-11-10T08:20:28.935Z INFO  [search] req=4da29d1d1aca request completed status=200 path=/v1/orders duration_ms=1582
+2026-11-10T08:20:29.098Z INFO  [billing] req=ba6067dd8a43 request completed status=200 path=/v1/orders duration_ms=1931
+2026-11-10T08:20:29.911Z ERROR [api] req=fee70437be8d db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:20:30.263Z INFO  [api] req=b0f5de918944 request completed status=200 path=/v1/orders duration_ms=2213
+2026-11-10T08:20:30.964Z INFO  [api] req=e4fd3925e912 request completed status=200 path=/v1/orders duration_ms=2336
+2026-11-10T08:20:31.770Z DEBUG [search] req=893e51a809c5 feature flag evaluated flag=new_checkout user=4735 value=false
+2026-11-10T08:20:32.432Z ERROR [billing] req=802d19bcc07d db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:20:32.910Z INFO  [api] req=4fccfb4d3cbc cache hit key=user:46089 ttl=300
+2026-11-10T08:20:33.294Z ERROR [worker] req=584ae64a5538 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:20:33.993Z INFO  [api] req=e2ac6deafaeb request completed status=200 path=/v1/orders duration_ms=3805
+2026-11-10T08:20:34.453Z INFO  [search] req=de40174e12d8 request completed status=200 path=/v1/orders duration_ms=1641
+2026-11-10T08:20:34.590Z WARN  [billing] req=282b14d23eb1 slow query table=orders duration_ms=882 rows=63681
+2026-11-10T08:20:35.189Z WARN  [worker] req=383152054093 slow query table=orders duration_ms=956 rows=54117
+2026-11-10T08:20:35.980Z INFO  [api] req=00545f5027f3 request completed status=200 path=/v1/orders duration_ms=194
+2026-11-10T08:20:36.579Z INFO  [auth] req=0ee07c56878f request completed status=200 path=/v1/orders duration_ms=360
+2026-11-10T08:20:37.346Z ERROR [billing] req=9cfabfd5925e db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:20:38.193Z INFO  [auth] req=4853522950aa cache hit key=user:20266 ttl=300
+2026-11-10T08:20:38.676Z INFO  [worker] req=185c614cb106 job finished queue=emails processed=80752
+2026-11-10T08:20:39.283Z INFO  [api] req=554518d19e04 request completed status=200 path=/v1/orders duration_ms=753
+2026-11-10T08:20:39.572Z WARN  [search] req=3203ff96e035 slow query table=orders duration_ms=499 rows=58677
+2026-11-10T08:20:40.166Z INFO  [billing] req=22d7b91a8079 cache hit key=user:95141 ttl=300
+2026-11-10T08:20:40.788Z INFO  [worker] req=761c46d62672 request completed status=200 path=/v1/orders duration_ms=3632
+2026-11-10T08:20:41.261Z INFO  [search] req=3ff799159a0f request completed status=200 path=/v1/orders duration_ms=2104
+2026-11-10T08:20:41.981Z INFO  [api] req=66d348ffb4b8 request completed status=200 path=/v1/orders duration_ms=875
+2026-11-10T08:20:42.377Z INFO  [auth] req=4b8b0472872b job finished queue=emails processed=76997
+2026-11-10T08:20:42.474Z INFO  [billing] req=c186c88c9c22 cache hit key=user:33390 ttl=300
+2026-11-10T08:20:43.364Z INFO  [auth] req=9bdc729eaef4 request completed status=200 path=/v1/orders duration_ms=1278
+2026-11-10T08:20:43.545Z ERROR [api] req=6161136f8da9 payment webhook timeout provider=stripe after_ms=3582
+2026-11-10T08:20:44.025Z INFO  [worker] req=acdb1236d0fd request completed status=200 path=/v1/orders duration_ms=3121
+2026-11-10T08:20:44.626Z INFO  [auth] req=01ce66dbbd68 request completed status=200 path=/v1/orders duration_ms=1501
+2026-11-10T08:20:44.753Z INFO  [billing] req=335a76006b4a request completed status=200 path=/v1/orders duration_ms=2187
+2026-11-10T08:20:45.643Z INFO  [billing] req=0f3c2113ddfe request completed status=200 path=/v1/orders duration_ms=3005
+2026-11-10T08:20:45.744Z INFO  [billing] req=596749cc7e18 job finished queue=emails processed=59040
+2026-11-10T08:20:46.573Z INFO  [search] req=faa798d6a9c6 job finished queue=emails processed=47588
+2026-11-10T08:20:46.895Z ERROR [search] req=9c53775c77e6 db connection refused host=pg-primary:5432 retry=4/5
+2026-11-10T08:20:47.686Z DEBUG [search] req=dccc879e848a feature flag evaluated flag=new_checkout user=63747 value=false
+2026-11-10T08:20:48.244Z ERROR [api] req=120433aabd87 payment webhook timeout provider=stripe after_ms=2435
+2026-11-10T08:20:48.599Z INFO  [worker] req=fd022d8cc108 request completed status=200 path=/v1/orders duration_ms=2637
+2026-11-10T08:20:49.106Z INFO  [billing] req=5e0f8a3d6655 cache hit key=user:59909 ttl=300
+2026-11-10T08:20:49.174Z INFO  [billing] req=f453bfd3ea33 job finished queue=emails processed=43087
+2026-11-10T08:20:49.372Z INFO  [billing] req=a93c3e5706bd request completed status=200 path=/v1/orders duration_ms=3335
+2026-11-10T08:20:49.468Z INFO  [search] req=391a858ec4e9 request completed status=200 path=/v1/orders duration_ms=3997
+2026-11-10T08:20:49.761Z ERROR [api] req=c69528b734a7 db connection refused host=pg-primary:5432 retry=4/5
+2026-11-10T08:20:50.368Z INFO  [search] req=aeac3e526752 cache hit key=user:80444 ttl=300
+2026-11-10T08:20:50.679Z INFO  [billing] req=0319d5e2aa2b request completed status=200 path=/v1/orders duration_ms=1558
+2026-11-10T08:20:51.146Z INFO  [billing] req=d5b88fddd176 request completed status=200 path=/v1/orders duration_ms=3817
+2026-11-10T08:20:51.898Z INFO  [auth] req=f4c1d1b79a6b request completed status=200 path=/v1/orders duration_ms=1922
+2026-11-10T08:20:52.551Z INFO  [auth] req=ecda69f267b5 request completed status=200 path=/v1/orders duration_ms=1927
+2026-11-10T08:20:53.351Z ERROR [billing] req=f0bbba0ccff5 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:20:54.064Z INFO  [billing] req=ab3622874565 request completed status=200 path=/v1/orders duration_ms=1342
+2026-11-10T08:20:54.636Z INFO  [api] req=26ed691c462d request completed status=200 path=/v1/orders duration_ms=1518
+2026-11-10T08:20:54.699Z ERROR [auth] req=72936ac3127a payment webhook timeout provider=stripe after_ms=1146
+2026-11-10T08:20:55.072Z DEBUG [api] req=89feb710faec feature flag evaluated flag=new_checkout user=17762 value=false
+2026-11-10T08:20:55.708Z INFO  [auth] req=6716c3dd169c request completed status=200 path=/v1/orders duration_ms=104
+2026-11-10T08:20:55.876Z INFO  [api] req=9ca229fa1af1 cache hit key=user:73957 ttl=300
+2026-11-10T08:20:55.945Z INFO  [worker] req=5d127b825cb1 request completed status=200 path=/v1/orders duration_ms=3113
+2026-11-10T08:20:56.522Z WARN  [api] req=6f869ef04ebb slow query table=orders duration_ms=1751 rows=16080
+2026-11-10T08:20:57.134Z INFO  [api] req=05f48be46ef0 request completed status=200 path=/v1/orders duration_ms=2857
+2026-11-10T08:20:57.685Z INFO  [auth] req=7813e2950349 cache hit key=user:40913 ttl=300
+2026-11-10T08:20:58.020Z INFO  [search] req=f643fb9a6d81 request completed status=200 path=/v1/orders duration_ms=2743
+2026-11-10T08:20:58.334Z INFO  [billing] req=8833e5fed8f1 cache hit key=user:21670 ttl=300
+2026-11-10T08:20:58.400Z ERROR [search] req=0c35de061edf db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:20:58.782Z INFO  [worker] req=af527ea7e7ad cache hit key=user:89754 ttl=300
+2026-11-10T08:20:59.189Z INFO  [worker] req=f314af1d6ba0 request completed status=200 path=/v1/orders duration_ms=2879
+2026-11-10T08:20:59.267Z INFO  [api] req=3e0ba41bdad2 cache hit key=user:39672 ttl=300
+2026-11-10T08:20:59.828Z INFO  [search] req=8d3c6daf3cad request completed status=200 path=/v1/orders duration_ms=578
+2026-11-10T08:21:00.687Z INFO  [api] req=cd8f058a8045 request completed status=200 path=/v1/orders duration_ms=3487
+2026-11-10T08:21:01.295Z INFO  [auth] req=f21a48a5d18a job finished queue=emails processed=40301
+2026-11-10T08:21:01.876Z INFO  [auth] req=fd518dcdb049 request completed status=200 path=/v1/orders duration_ms=1459
+2026-11-10T08:21:02.742Z INFO  [worker] req=8d7c59675d38 cache hit key=user:7116 ttl=300
+2026-11-10T08:21:02.999Z INFO  [auth] req=ccc181d744fa cache hit key=user:5048 ttl=300
+2026-11-10T08:21:03.209Z INFO  [worker] req=dd45173dc898 request completed status=200 path=/v1/orders duration_ms=1023
+2026-11-10T08:21:03.692Z ERROR [search] req=a78d2fa1bea6 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:21:04.532Z INFO  [billing] req=85b0ff30ccf5 request completed status=200 path=/v1/orders duration_ms=1079
+2026-11-10T08:21:04.828Z ERROR [billing] req=c3f18664dce8 db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:21:05.151Z ERROR [billing] req=45e80c80e344 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:21:05.998Z INFO  [billing] req=34e862406763 request completed status=200 path=/v1/orders duration_ms=2800
+2026-11-10T08:21:06.248Z INFO  [api] req=550b855f63d4 request completed status=200 path=/v1/orders duration_ms=2609
+2026-11-10T08:21:07.019Z INFO  [api] req=64333e54a780 cache hit key=user:71005 ttl=300
+2026-11-10T08:21:07.528Z INFO  [auth] req=a760d6429f1d request completed status=200 path=/v1/orders duration_ms=472
+2026-11-10T08:21:08.193Z INFO  [auth] req=210b038dbf34 request completed status=200 path=/v1/orders duration_ms=1198
+2026-11-10T08:21:08.415Z INFO  [worker] req=442923053b49 request completed status=200 path=/v1/orders duration_ms=421
+2026-11-10T08:21:08.534Z WARN  [worker] req=d9086016f7de slow query table=orders duration_ms=2667 rows=48735
+2026-11-10T08:21:08.668Z WARN  [search] req=5c70092f43c6 slow query table=orders duration_ms=2853 rows=95430
+2026-11-10T08:21:09.036Z INFO  [api] req=6b76f0f2a696 cache hit key=user:69765 ttl=300
+2026-11-10T08:21:09.276Z INFO  [auth] req=3c191e80578a request completed status=200 path=/v1/orders duration_ms=690
+2026-11-10T08:21:09.627Z DEBUG [auth] req=f73c0f04e607 feature flag evaluated flag=new_checkout user=88219 value=false
+2026-11-10T08:21:10.273Z DEBUG [worker] req=865e78df7eb9 feature flag evaluated flag=new_checkout user=23846 value=false
+2026-11-10T08:21:10.361Z DEBUG [api] req=a3dc3fc7564a feature flag evaluated flag=new_checkout user=9538 value=false
+2026-11-10T08:21:11.185Z INFO  [billing] req=9fa522f48ca7 request completed status=200 path=/v1/orders duration_ms=3457
+2026-11-10T08:21:11.463Z INFO  [auth] req=8efdab4129c7 job finished queue=emails processed=58361
+2026-11-10T08:21:11.875Z INFO  [worker] req=5656566b7393 cache hit key=user:14466 ttl=300
+2026-11-10T08:21:12.720Z INFO  [search] req=a4a3253611bf request completed status=200 path=/v1/orders duration_ms=635
+2026-11-10T08:21:13.427Z INFO  [search] req=9aa5dd678d44 request completed status=200 path=/v1/orders duration_ms=3114
+2026-11-10T08:21:13.698Z DEBUG [search] req=239d5f3e37fe feature flag evaluated flag=new_checkout user=1521 value=false
+2026-11-10T08:21:14.499Z INFO  [search] req=d572391afb50 cache hit key=user:9240 ttl=300
+2026-11-10T08:21:14.621Z INFO  [worker] req=bc4e5d0f5ec3 cache hit key=user:75991 ttl=300
+2026-11-10T08:21:14.715Z DEBUG [billing] req=fee82e56460c feature flag evaluated flag=new_checkout user=21053 value=false
+2026-11-10T08:21:15.559Z INFO  [billing] req=395c4e0d45f0 request completed status=200 path=/v1/orders duration_ms=3156
+2026-11-10T08:21:16.214Z DEBUG [search] req=597bba9d350d feature flag evaluated flag=new_checkout user=46764 value=false
+2026-11-10T08:21:16.849Z WARN  [search] req=567635c28004 slow query table=orders duration_ms=1680 rows=95100
+2026-11-10T08:21:17.523Z ERROR [api] req=8b2f837b09e9 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:21:18.017Z ERROR [api] req=fcd3b82bdbee db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:21:18.855Z INFO  [auth] req=9994edb1837c request completed status=200 path=/v1/orders duration_ms=3884
+2026-11-10T08:21:18.966Z WARN  [api] req=6cb4017fe149 slow query table=orders duration_ms=646 rows=17012
+2026-11-10T08:21:19.324Z WARN  [search] req=1788683a6823 slow query table=orders duration_ms=1325 rows=31938
+2026-11-10T08:21:20.170Z INFO  [api] req=ff0b944c95a3 request completed status=200 path=/v1/orders duration_ms=3548
+2026-11-10T08:21:20.982Z INFO  [worker] req=fe887ad94e82 request completed status=200 path=/v1/orders duration_ms=3810
+2026-11-10T08:21:21.250Z INFO  [api] req=3a23dae6a2ea job finished queue=emails processed=59209
+2026-11-10T08:21:21.310Z INFO  [worker] req=c51862681bb5 job finished queue=emails processed=16691
+2026-11-10T08:21:21.682Z INFO  [search] req=dce5c610894e cache hit key=user:4592 ttl=300
+2026-11-10T08:21:22.457Z INFO  [search] req=ab4d85908a42 cache hit key=user:66757 ttl=300
+2026-11-10T08:21:22.947Z INFO  [worker] req=b9e7c5e9aea0 request completed status=200 path=/v1/orders duration_ms=3134
+2026-11-10T08:21:23.502Z ERROR [billing] req=c15e060e0a61 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:21:24.365Z WARN  [worker] req=c6adfdddb5b7 slow query table=orders duration_ms=1809 rows=2612
+2026-11-10T08:21:25.121Z INFO  [worker] req=245affcc0e22 cache hit key=user:76666 ttl=300
+2026-11-10T08:21:25.520Z INFO  [billing] req=f8b1f6f67fa1 job finished queue=emails processed=38659
+2026-11-10T08:21:25.607Z WARN  [auth] req=ba845e063180 slow query table=orders duration_ms=2450 rows=26886
+2026-11-10T08:21:25.910Z INFO  [worker] req=2df6fd063ba2 job finished queue=emails processed=58829
+2026-11-10T08:21:26.241Z INFO  [auth] req=3320efe7ab18 request completed status=200 path=/v1/orders duration_ms=657
+2026-11-10T08:21:27.141Z ERROR [api] req=63139a0aca4c db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:21:27.465Z WARN  [search] req=9f70a0da5fd3 slow query table=orders duration_ms=1685 rows=42911
+2026-11-10T08:21:28.298Z INFO  [billing] req=1ff5ab6fd26f request completed status=200 path=/v1/orders duration_ms=502
+2026-11-10T08:21:28.843Z INFO  [billing] req=fd0e3cb8d3e8 request completed status=200 path=/v1/orders duration_ms=3333
+2026-11-10T08:21:29.298Z INFO  [billing] req=e38854852697 job finished queue=emails processed=26058
+2026-11-10T08:21:29.915Z INFO  [auth] req=1366a5e1def5 request completed status=200 path=/v1/orders duration_ms=3842
+2026-11-10T08:21:30.444Z INFO  [api] req=b9221b6c1132 request completed status=200 path=/v1/orders duration_ms=3559
+2026-11-10T08:21:31.283Z INFO  [worker] req=92cb24326989 request completed status=200 path=/v1/orders duration_ms=3630
+2026-11-10T08:21:31.519Z INFO  [billing] req=70fcc3fb4b8e request completed status=200 path=/v1/orders duration_ms=3613
+2026-11-10T08:21:32.273Z INFO  [billing] req=ba528be17b1b cache hit key=user:62068 ttl=300
+2026-11-10T08:21:33.068Z INFO  [worker] req=ef0a934105cc cache hit key=user:18002 ttl=300
+2026-11-10T08:21:33.184Z INFO  [api] req=99e8383f146c request completed status=200 path=/v1/orders duration_ms=3577
+2026-11-10T08:21:34.055Z INFO  [api] req=e34f46d749a8 request completed status=200 path=/v1/orders duration_ms=1594
+2026-11-10T08:21:34.706Z INFO  [auth] req=2b17a632ded7 cache hit key=user:5291 ttl=300
+2026-11-10T08:21:35.181Z INFO  [billing] req=2fe9490e289d cache hit key=user:28614 ttl=300
+2026-11-10T08:21:36.038Z ERROR [api] req=69c76ebe23d1 db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:21:36.506Z INFO  [billing] req=e249847fd132 request completed status=200 path=/v1/orders duration_ms=2934
+2026-11-10T08:21:37.058Z INFO  [worker] req=5edeaf767d60 cache hit key=user:57700 ttl=300
+2026-11-10T08:21:37.158Z INFO  [search] req=9a5acc9bf2b8 request completed status=200 path=/v1/orders duration_ms=1777
+2026-11-10T08:21:37.557Z INFO  [worker] req=01066e067050 cache hit key=user:48502 ttl=300
+2026-11-10T08:21:37.933Z INFO  [api] req=3825a0d4604b request completed status=200 path=/v1/orders duration_ms=143
+2026-11-10T08:21:38.676Z INFO  [auth] req=928f0610c45a request completed status=200 path=/v1/orders duration_ms=2230
+2026-11-10T08:21:39.244Z INFO  [auth] req=1e17ca2b2438 request completed status=200 path=/v1/orders duration_ms=1983
+2026-11-10T08:21:39.313Z INFO  [worker] req=81f66aadedde job finished queue=emails processed=75784
+2026-11-10T08:21:39.405Z INFO  [worker] req=a18531e523d0 request completed status=200 path=/v1/orders duration_ms=885
+2026-11-10T08:21:40.029Z INFO  [auth] req=00ca82f9201b request completed status=200 path=/v1/orders duration_ms=2738
+2026-11-10T08:21:40.417Z ERROR [auth] req=fa27c05f85f4 db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:21:40.967Z INFO  [billing] req=8fe5655777c9 request completed status=200 path=/v1/orders duration_ms=3621
+2026-11-10T08:21:41.270Z INFO  [search] req=3372d5029c1d request completed status=200 path=/v1/orders duration_ms=3755
+2026-11-10T08:21:41.843Z INFO  [worker] req=1337d5759a8a request completed status=200 path=/v1/orders duration_ms=1609
+2026-11-10T08:21:42.469Z INFO  [billing] req=0c41315e5e63 cache hit key=user:7854 ttl=300
+2026-11-10T08:21:42.753Z INFO  [api] req=3bfe9da73054 cache hit key=user:92900 ttl=300
+2026-11-10T08:21:43.164Z INFO  [api] req=e1cc637f0fe0 request completed status=200 path=/v1/orders duration_ms=3198
+2026-11-10T08:21:43.866Z INFO  [billing] req=99978c8049fc request completed status=200 path=/v1/orders duration_ms=2648
+2026-11-10T08:21:44.669Z DEBUG [billing] req=a8a21d2ec4c0 feature flag evaluated flag=new_checkout user=57843 value=false
+2026-11-10T08:21:45.113Z INFO  [api] req=a63efde17571 request completed status=200 path=/v1/orders duration_ms=3811
+2026-11-10T08:21:45.346Z INFO  [worker] req=797363713aef request completed status=200 path=/v1/orders duration_ms=2040
+2026-11-10T08:21:45.528Z ERROR [api] req=6d910af5ed61 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:21:45.710Z INFO  [worker] req=832a583f0eb5 request completed status=200 path=/v1/orders duration_ms=3301
+2026-11-10T08:21:46.188Z INFO  [api] req=2629a7128c7e request completed status=200 path=/v1/orders duration_ms=2918
+2026-11-10T08:21:46.597Z INFO  [billing] req=a55dd6e71987 cache hit key=user:76861 ttl=300
+2026-11-10T08:21:47.073Z WARN  [api] req=4554800272db slow query table=orders duration_ms=2335 rows=33703
+2026-11-10T08:21:47.957Z INFO  [api] req=43283c772315 request completed status=200 path=/v1/orders duration_ms=2400
+2026-11-10T08:21:48.260Z INFO  [search] req=b0a42d907f7f request completed status=200 path=/v1/orders duration_ms=2865
+2026-11-10T08:21:48.825Z INFO  [auth] req=84ef5744bf9a cache hit key=user:99573 ttl=300
+2026-11-10T08:21:49.050Z INFO  [auth] req=04092967ed90 request completed status=200 path=/v1/orders duration_ms=1019
+2026-11-10T08:21:49.613Z INFO  [billing] req=e55b5bacf1d5 request completed status=200 path=/v1/orders duration_ms=1073
+2026-11-10T08:21:50.465Z WARN  [search] req=00814311116b slow query table=orders duration_ms=1470 rows=57629
+2026-11-10T08:21:51.234Z INFO  [billing] req=03e4f7361e8c request completed status=200 path=/v1/orders duration_ms=74
+2026-11-10T08:21:51.938Z INFO  [auth] req=d1d016ab8bd3 request completed status=200 path=/v1/orders duration_ms=3898
+2026-11-10T08:21:52.695Z ERROR [search] req=87008be03f7e db connection refused host=pg-primary:5432 retry=4/5
+2026-11-10T08:21:53.130Z INFO  [api] req=05e2c5c108b2 cache hit key=user:77830 ttl=300
+2026-11-10T08:21:53.914Z INFO  [search] req=61c2d924fcb9 cache hit key=user:87021 ttl=300
+2026-11-10T08:21:54.805Z INFO  [auth] req=f971d40feabb cache hit key=user:912 ttl=300
+2026-11-10T08:21:54.886Z INFO  [billing] req=42e29f8add89 request completed status=200 path=/v1/orders duration_ms=3860
+2026-11-10T08:21:55.344Z INFO  [billing] req=e91ff99446f8 request completed status=200 path=/v1/orders duration_ms=754
+2026-11-10T08:21:55.490Z INFO  [auth] req=67687104c682 request completed status=200 path=/v1/orders duration_ms=3877
+2026-11-10T08:21:56.356Z DEBUG [api] req=ba3a37c17ec4 feature flag evaluated flag=new_checkout user=9564 value=false
+2026-11-10T08:21:56.773Z INFO  [search] req=650862274328 request completed status=200 path=/v1/orders duration_ms=2049
+2026-11-10T08:21:57.564Z ERROR [worker] req=7b3431513b67 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:21:57.742Z DEBUG [search] req=e84cabd03403 feature flag evaluated flag=new_checkout user=48675 value=false
+2026-11-10T08:21:58.314Z INFO  [worker] req=ec17db0683b3 job finished queue=emails processed=31570
+2026-11-10T08:21:58.741Z DEBUG [worker] req=d1296b7737c9 feature flag evaluated flag=new_checkout user=24050 value=false
+2026-11-10T08:21:59.161Z ERROR [billing] req=e66e9dc3bea9 db connection refused host=pg-primary:5432 retry=1/5
+2026-11-10T08:21:59.955Z INFO  [billing] req=d2ba97635f12 job finished queue=emails processed=97406
+2026-11-10T08:22:00.844Z INFO  [billing] req=bf535258a575 cache hit key=user:12009 ttl=300
+2026-11-10T08:22:01.083Z INFO  [search] req=f43191a6fcf8 job finished queue=emails processed=43401
+2026-11-10T08:22:01.200Z INFO  [auth] req=b1dde21ab14d job finished queue=emails processed=56155
+2026-11-10T08:22:01.919Z DEBUG [worker] req=4f48efcc2cc8 feature flag evaluated flag=new_checkout user=40290 value=false
+2026-11-10T08:22:02.374Z INFO  [auth] req=7cda90e977e5 cache hit key=user:94207 ttl=300
+2026-11-10T08:22:02.612Z INFO  [worker] req=0d2b534f4770 request completed status=200 path=/v1/orders duration_ms=1640
+2026-11-10T08:22:03.407Z INFO  [api] req=64536c4f176d request completed status=200 path=/v1/orders duration_ms=1424
+2026-11-10T08:22:04.108Z INFO  [worker] req=b392a8ce29f9 job finished queue=emails processed=62238
+2026-11-10T08:22:04.884Z INFO  [auth] req=762588cdaed3 cache hit key=user:32696 ttl=300
+2026-11-10T08:22:05.146Z INFO  [search] req=b3fd36b0b8a5 job finished queue=emails processed=30636
+2026-11-10T08:22:05.950Z INFO  [auth] req=c3faf8606fb6 request completed status=200 path=/v1/orders duration_ms=2166
+2026-11-10T08:22:06.553Z INFO  [billing] req=4f52cf443649 cache hit key=user:43551 ttl=300
+2026-11-10T08:22:07.058Z ERROR [search] req=a6abab447ae4 db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:22:07.937Z INFO  [search] req=94fef8fc3c9a request completed status=200 path=/v1/orders duration_ms=287
+2026-11-10T08:22:08.831Z INFO  [search] req=d815132e8689 request completed status=200 path=/v1/orders duration_ms=3307
+2026-11-10T08:22:09.235Z INFO  [api] req=8940f22e53a7 request completed status=200 path=/v1/orders duration_ms=1378
+2026-11-10T08:22:09.814Z INFO  [search] req=882595ad0b9d cache hit key=user:13852 ttl=300
+2026-11-10T08:22:10.529Z ERROR [api] req=9bf084cbef4e payment webhook timeout provider=stripe after_ms=1148
+2026-11-10T08:22:10.911Z INFO  [worker] req=54c842f0c421 cache hit key=user:84633 ttl=300
+2026-11-10T08:22:11.682Z DEBUG [auth] req=17f4f4a1e747 feature flag evaluated flag=new_checkout user=33829 value=false
+2026-11-10T08:22:12.444Z WARN  [billing] req=9b2c2732c0fe slow query table=orders duration_ms=3636 rows=22909
+2026-11-10T08:22:12.900Z INFO  [auth] req=1f12ada59334 request completed status=200 path=/v1/orders duration_ms=3884
+2026-11-10T08:22:13.465Z INFO  [billing] req=5cdb5bacdb85 request completed status=200 path=/v1/orders duration_ms=1103
+2026-11-10T08:22:14.030Z INFO  [search] req=f91f889fd003 cache hit key=user:45695 ttl=300
+2026-11-10T08:22:14.738Z INFO  [api] req=2c61f7447a69 cache hit key=user:30914 ttl=300
+2026-11-10T08:22:15.496Z INFO  [worker] req=cf5aca482c56 request completed status=200 path=/v1/orders duration_ms=3548
+2026-11-10T08:22:16.105Z ERROR [billing] req=ee87d5e20297 payment webhook timeout provider=stripe after_ms=2039
+2026-11-10T08:22:16.610Z INFO  [auth] req=f8fcc3a6b2c5 request completed status=200 path=/v1/orders duration_ms=2182
+2026-11-10T08:22:16.896Z INFO  [search] req=0c11770b089f request completed status=200 path=/v1/orders duration_ms=1217
+2026-11-10T08:22:17.413Z INFO  [search] req=023795d12358 cache hit key=user:36845 ttl=300
+2026-11-10T08:22:17.927Z INFO  [api] req=aeb0bf172a78 cache hit key=user:79562 ttl=300
+2026-11-10T08:22:18.248Z WARN  [worker] req=d30c1dd3c4bd slow query table=orders duration_ms=3004 rows=2522
+2026-11-10T08:22:18.497Z ERROR [search] req=e3e9445fd9a1 payment webhook timeout provider=stripe after_ms=763
+2026-11-10T08:22:18.638Z INFO  [billing] req=ce771888bbe5 request completed status=200 path=/v1/orders duration_ms=2769
+2026-11-10T08:22:19.112Z INFO  [api] req=6aa7facb20c0 request completed status=200 path=/v1/orders duration_ms=43
+2026-11-10T08:22:19.585Z INFO  [api] req=86263538f20b request completed status=200 path=/v1/orders duration_ms=2223
+2026-11-10T08:22:20.346Z INFO  [api] req=9d810e08c046 request completed status=200 path=/v1/orders duration_ms=3363
+2026-11-10T08:22:21.143Z WARN  [worker] req=c9efd3a2639b slow query table=orders duration_ms=2700 rows=99604
+2026-11-10T08:22:21.448Z DEBUG [auth] req=b5b56a664f44 feature flag evaluated flag=new_checkout user=29075 value=false
+2026-11-10T08:22:21.763Z INFO  [worker] req=08c86410ffd4 request completed status=200 path=/v1/orders duration_ms=1253
+2026-11-10T08:22:21.969Z ERROR [auth] req=d1b97b7f6049 db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:22:22.299Z INFO  [search] req=5b58e9195576 job finished queue=emails processed=58455
+2026-11-10T08:22:23.178Z INFO  [auth] req=da779c3e60f8 job finished queue=emails processed=8930
+2026-11-10T08:22:23.351Z WARN  [api] req=804b15deac8a slow query table=orders duration_ms=3613 rows=63323
+2026-11-10T08:22:24.213Z INFO  [api] req=852a56649d4c request completed status=200 path=/v1/orders duration_ms=3734
+2026-11-10T08:22:24.311Z DEBUG [search] req=05a9a6429b8d feature flag evaluated flag=new_checkout user=93508 value=false
+2026-11-10T08:22:24.876Z INFO  [auth] req=047ef348e1ea request completed status=200 path=/v1/orders duration_ms=1074
+2026-11-10T08:22:25.621Z INFO  [billing] req=280c0b1673ea cache hit key=user:35898 ttl=300
+2026-11-10T08:22:26.467Z INFO  [billing] req=e99bb7b8941c cache hit key=user:2030 ttl=300
+2026-11-10T08:22:26.752Z INFO  [worker] req=7789729d27cd cache hit key=user:9004 ttl=300
+2026-11-10T08:22:26.994Z INFO  [api] req=8d203d5b759a request completed status=200 path=/v1/orders duration_ms=2624
+2026-11-10T08:22:27.616Z INFO  [search] req=1bb6279e441a request completed status=200 path=/v1/orders duration_ms=2829
+2026-11-10T08:22:28.102Z INFO  [api] req=7cc728c5925b request completed status=200 path=/v1/orders duration_ms=134
+2026-11-10T08:22:28.625Z INFO  [billing] req=585d50b16152 job finished queue=emails processed=44693
+2026-11-10T08:22:28.986Z INFO  [search] req=ee1f46694630 cache hit key=user:47618 ttl=300
+2026-11-10T08:22:29.703Z INFO  [billing] req=1acb6eccfc7a job finished queue=emails processed=81695
+2026-11-10T08:22:30.393Z WARN  [billing] req=399233f188d3 slow query table=orders duration_ms=1623 rows=19397
+2026-11-10T08:22:31.043Z INFO  [worker] req=d428a8430f65 cache hit key=user:80414 ttl=300
+2026-11-10T08:22:31.370Z INFO  [api] req=aad3a08b32c1 request completed status=200 path=/v1/orders duration_ms=3185
+2026-11-10T08:22:31.596Z ERROR [search] req=a0acd3a4e65a db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:22:32.184Z INFO  [worker] req=c31fcad221ac request completed status=200 path=/v1/orders duration_ms=1576
+2026-11-10T08:22:32.483Z WARN  [search] req=fac622a7890e slow query table=orders duration_ms=2001 rows=88485
+2026-11-10T08:22:32.983Z INFO  [auth] req=9736394f9aed request completed status=200 path=/v1/orders duration_ms=2889
+2026-11-10T08:22:33.162Z INFO  [auth] req=57194ee2aabf request completed status=200 path=/v1/orders duration_ms=3966
+2026-11-10T08:22:33.475Z INFO  [auth] req=8cd7157c49bc request completed status=200 path=/v1/orders duration_ms=3398
+2026-11-10T08:22:34.240Z WARN  [api] req=56b5abedae06 slow query table=orders duration_ms=1467 rows=34934
+2026-11-10T08:22:34.855Z INFO  [api] req=86bffba699b6 request completed status=200 path=/v1/orders duration_ms=1598
+2026-11-10T08:22:35.673Z ERROR [auth] req=99f9709f8ca6 payment webhook timeout provider=stripe after_ms=1538
+2026-11-10T08:22:36.038Z INFO  [worker] req=e9ee42b9de3e request completed status=200 path=/v1/orders duration_ms=528
+2026-11-10T08:22:36.812Z INFO  [auth] req=19acbd515faa cache hit key=user:97961 ttl=300
+2026-11-10T08:22:37.281Z INFO  [api] req=1c4d6b5f7457 request completed status=200 path=/v1/orders duration_ms=476
+2026-11-10T08:22:37.671Z INFO  [auth] req=a21637d4b761 request completed status=200 path=/v1/orders duration_ms=1031
+2026-11-10T08:22:38.520Z INFO  [search] req=51af6cc5ef09 cache hit key=user:61632 ttl=300
+2026-11-10T08:22:39.086Z INFO  [billing] req=c13000458d5c request completed status=200 path=/v1/orders duration_ms=132
+2026-11-10T08:22:39.354Z ERROR [billing] req=2d6be8d32209 payment webhook timeout provider=stripe after_ms=3173
+2026-11-10T08:22:39.997Z INFO  [worker] req=f6479415e325 request completed status=200 path=/v1/orders duration_ms=622
+2026-11-10T08:22:40.881Z INFO  [search] req=f57753fa3569 cache hit key=user:93443 ttl=300
+2026-11-10T08:22:41.618Z INFO  [auth] req=91ea4cf780f7 job finished queue=emails processed=65541
+2026-11-10T08:22:42.109Z INFO  [billing] req=f6bd0bf61766 request completed status=200 path=/v1/orders duration_ms=1184
+2026-11-10T08:22:42.599Z ERROR [billing] req=ed3e3aa90ed0 payment webhook timeout provider=stripe after_ms=2706
+2026-11-10T08:22:43.169Z INFO  [auth] req=90f78ab1d231 cache hit key=user:73411 ttl=300
+2026-11-10T08:22:43.570Z INFO  [worker] req=a185deefef7e request completed status=200 path=/v1/orders duration_ms=2932
+2026-11-10T08:22:44.255Z INFO  [auth] req=2e66856bed7b cache hit key=user:8216 ttl=300
+2026-11-10T08:22:44.342Z INFO  [worker] req=4826d37308ac request completed status=200 path=/v1/orders duration_ms=195
+2026-11-10T08:22:44.594Z INFO  [api] req=ca487958c077 request completed status=200 path=/v1/orders duration_ms=919
+2026-11-10T08:22:45.299Z INFO  [billing] req=c6b90ff04d12 cache hit key=user:81718 ttl=300
+2026-11-10T08:22:45.934Z INFO  [worker] req=76574ecb0834 cache hit key=user:6007 ttl=300
+2026-11-10T08:22:46.085Z WARN  [auth] req=d0571c73f504 slow query table=orders duration_ms=2300 rows=76280
+2026-11-10T08:22:46.674Z INFO  [auth] req=b316441ed6d6 request completed status=200 path=/v1/orders duration_ms=1876
+2026-11-10T08:22:47.170Z INFO  [worker] req=bdf80a25bbd9 cache hit key=user:21531 ttl=300
+2026-11-10T08:22:47.981Z INFO  [worker] req=f218ec3b158f cache hit key=user:45630 ttl=300
+2026-11-10T08:22:48.865Z INFO  [auth] req=5e6c84d0e447 cache hit key=user:1617 ttl=300
+2026-11-10T08:22:49.301Z INFO  [api] req=149ecb39d445 job finished queue=emails processed=97509
+2026-11-10T08:22:49.559Z INFO  [billing] req=afa6e78a118d request completed status=200 path=/v1/orders duration_ms=836
+2026-11-10T08:22:49.837Z INFO  [auth] req=12a930cf9f6d request completed status=200 path=/v1/orders duration_ms=705
+2026-11-10T08:22:50.671Z INFO  [auth] req=34071032972b request completed status=200 path=/v1/orders duration_ms=3703
+2026-11-10T08:22:51.561Z INFO  [auth] req=04b3d8c475a1 cache hit key=user:14995 ttl=300
+2026-11-10T08:22:51.619Z WARN  [auth] req=d701c94f74b4 slow query table=orders duration_ms=3474 rows=76488
+2026-11-10T08:22:52.311Z DEBUG [auth] req=9ba2a4e2f5cd feature flag evaluated flag=new_checkout user=34206 value=false
+2026-11-10T08:22:52.803Z INFO  [auth] req=fdb7d874f2dc cache hit key=user:92444 ttl=300
+2026-11-10T08:22:53.323Z INFO  [worker] req=6e17e6a0688b request completed status=200 path=/v1/orders duration_ms=171
+2026-11-10T08:22:54.034Z INFO  [auth] req=97f043bd1dd3 cache hit key=user:54249 ttl=300
+2026-11-10T08:22:54.593Z INFO  [worker] req=8120e50bcb44 request completed status=200 path=/v1/orders duration_ms=2400
+2026-11-10T08:22:54.952Z WARN  [api] req=e037508685ab slow query table=orders duration_ms=574 rows=70053
+2026-11-10T08:22:55.659Z INFO  [worker] req=c573b5f29a58 cache hit key=user:75229 ttl=300
+2026-11-10T08:22:55.885Z DEBUG [search] req=3957c8aff202 feature flag evaluated flag=new_checkout user=25200 value=false
+2026-11-10T08:22:56.098Z INFO  [auth] req=1ad08982042f cache hit key=user:19847 ttl=300
+2026-11-10T08:22:56.426Z INFO  [auth] req=eec00508da0e request completed status=200 path=/v1/orders duration_ms=2819
+2026-11-10T08:22:56.588Z INFO  [billing] req=c8b2d4f0d482 request completed status=200 path=/v1/orders duration_ms=497
+2026-11-10T08:22:56.664Z INFO  [billing] req=eea70d547efc request completed status=200 path=/v1/orders duration_ms=2098
+2026-11-10T08:22:56.771Z WARN  [auth] req=cf55f2414719 slow query table=orders duration_ms=3815 rows=42443
+2026-11-10T08:22:56.951Z INFO  [search] req=80a2b8b08028 request completed status=200 path=/v1/orders duration_ms=3956
+2026-11-10T08:22:57.186Z DEBUG [worker] req=db656f1aeaf9 feature flag evaluated flag=new_checkout user=77013 value=false
+2026-11-10T08:22:57.478Z INFO  [billing] req=88678e5a8fe8 job finished queue=emails processed=72356
+2026-11-10T08:22:57.920Z INFO  [auth] req=3b42be465718 request completed status=200 path=/v1/orders duration_ms=216
+2026-11-10T08:22:58.317Z INFO  [auth] req=acb4154f7eb3 cache hit key=user:65194 ttl=300
+2026-11-10T08:22:58.805Z INFO  [billing] req=21a5d4eb34f8 request completed status=200 path=/v1/orders duration_ms=47
+2026-11-10T08:22:59.037Z INFO  [auth] req=36e35d332d93 request completed status=200 path=/v1/orders duration_ms=3926
+2026-11-10T08:22:59.265Z INFO  [billing] req=b2ed97381c92 request completed status=200 path=/v1/orders duration_ms=1591
+2026-11-10T08:22:59.532Z INFO  [auth] req=9079acb101cd job finished queue=emails processed=64840
+2026-11-10T08:22:59.607Z INFO  [billing] req=ccd11aca69d5 job finished queue=emails processed=939
+2026-11-10T08:23:00.105Z INFO  [api] req=b96da01c99b8 request completed status=200 path=/v1/orders duration_ms=3063
+2026-11-10T08:23:00.651Z INFO  [worker] req=7c0ce662a3eb request completed status=200 path=/v1/orders duration_ms=2229
+2026-11-10T08:23:00.913Z INFO  [auth] req=805350c4b064 request completed status=200 path=/v1/orders duration_ms=327
+2026-11-10T08:23:01.023Z INFO  [api] req=567965f4aad2 job finished queue=emails processed=15379
+2026-11-10T08:23:01.633Z INFO  [search] req=0d022974653a cache hit key=user:57713 ttl=300
+2026-11-10T08:23:02.080Z INFO  [worker] req=22833c76d197 cache hit key=user:43139 ttl=300
+2026-11-10T08:23:02.612Z INFO  [worker] req=117f0ea80f04 request completed status=200 path=/v1/orders duration_ms=165
+2026-11-10T08:23:03.313Z WARN  [worker] req=3194bdc92820 slow query table=orders duration_ms=673 rows=41915
+2026-11-10T08:23:03.397Z WARN  [worker] req=6bcd483f238e slow query table=orders duration_ms=1341 rows=91650
+2026-11-10T08:23:04.096Z DEBUG [billing] req=11f4865e6b43 feature flag evaluated flag=new_checkout user=99946 value=false
+2026-11-10T08:23:04.980Z INFO  [search] req=61fab14e4b0e request completed status=200 path=/v1/orders duration_ms=2323
+2026-11-10T08:23:05.469Z ERROR [auth] req=9bf79b9d2c51 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:23:06.210Z INFO  [auth] req=2bdcb30555b2 cache hit key=user:92360 ttl=300
+2026-11-10T08:23:06.266Z INFO  [search] req=b0cc0ca3de7d request completed status=200 path=/v1/orders duration_ms=697
+2026-11-10T08:23:07.011Z INFO  [auth] req=ee61ddeb506d request completed status=200 path=/v1/orders duration_ms=1326
+2026-11-10T08:23:07.430Z INFO  [billing] req=d02d3e825311 request completed status=200 path=/v1/orders duration_ms=392
+2026-11-10T08:23:08.256Z WARN  [worker] req=448a87f2d70f slow query table=orders duration_ms=2574 rows=4644
+2026-11-10T08:23:08.846Z INFO  [search] req=17225cbb80f0 cache hit key=user:58720 ttl=300
+2026-11-10T08:23:09.519Z INFO  [auth] req=eae75e1da00b request completed status=200 path=/v1/orders duration_ms=2074
+2026-11-10T08:23:10.349Z ERROR [api] req=754c4050b573 db connection refused host=pg-primary:5432 retry=5/5
+2026-11-10T08:23:10.842Z INFO  [auth] req=aba84f74a6e8 cache hit key=user:88593 ttl=300
+2026-11-10T08:23:11.450Z INFO  [auth] req=40f78724ef12 request completed status=200 path=/v1/orders duration_ms=459
+2026-11-10T08:23:12.179Z WARN  [billing] req=47128126d22e slow query table=orders duration_ms=2035 rows=99694
+2026-11-10T08:23:12.323Z INFO  [search] req=97432508d74a request completed status=200 path=/v1/orders duration_ms=857
+2026-11-10T08:23:12.618Z INFO  [search] req=1ff58209e685 request completed status=200 path=/v1/orders duration_ms=1313
+2026-11-10T08:23:12.905Z INFO  [api] req=3d0cacb8119b request completed status=200 path=/v1/orders duration_ms=2992
+2026-11-10T08:23:13.086Z INFO  [auth] req=d4faf61ea2f1 cache hit key=user:27739 ttl=300
+2026-11-10T08:23:13.764Z ERROR [auth] req=e7d86c24971d payment webhook timeout provider=stripe after_ms=2045
+2026-11-10T08:23:13.960Z INFO  [search] req=c0ae3210f8a0 cache hit key=user:92548 ttl=300
+2026-11-10T08:23:14.115Z DEBUG [search] req=7db97ba14bc2 feature flag evaluated flag=new_checkout user=36196 value=false
+2026-11-10T08:23:14.920Z ERROR [billing] req=d9ae2ac83e7c db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:23:15.719Z INFO  [api] req=7859becc1b64 cache hit key=user:70914 ttl=300
+2026-11-10T08:23:15.896Z INFO  [billing] req=9ada7c42364a cache hit key=user:31045 ttl=300
+2026-11-10T08:23:16.341Z INFO  [billing] req=bed47f60074a request completed status=200 path=/v1/orders duration_ms=2508
+2026-11-10T08:23:17.072Z ERROR [auth] req=55430d41e821 db connection refused host=pg-primary:5432 retry=2/5
+2026-11-10T08:23:17.465Z DEBUG [billing] req=da8b8f7ff136 feature flag evaluated flag=new_checkout user=21568 value=false
+2026-11-10T08:23:18.065Z INFO  [billing] req=3032ea3f7663 request completed status=200 path=/v1/orders duration_ms=3241
+2026-11-10T08:23:18.592Z INFO  [billing] req=05a6bcb4a33e request completed status=200 path=/v1/orders duration_ms=2917
+2026-11-10T08:23:19.115Z INFO  [api] req=034a88b351eb cache hit key=user:78628 ttl=300
+2026-11-10T08:23:19.569Z INFO  [billing] req=6bed16bd0486 request completed status=200 path=/v1/orders duration_ms=1172
+2026-11-10T08:23:19.845Z INFO  [auth] req=e1db6f06a916 request completed status=200 path=/v1/orders duration_ms=3606
+2026-11-10T08:23:20.671Z WARN  [api] req=f367e2977d91 slow query table=orders duration_ms=3089 rows=11464
+2026-11-10T08:23:20.745Z WARN  [billing] req=2ad32cacbeb7 slow query table=orders duration_ms=565 rows=36032
+2026-11-10T08:23:21.456Z INFO  [billing] req=a2ae1a9e104f cache hit key=user:4069 ttl=300
+2026-11-10T08:23:22.298Z INFO  [search] req=fbf5abbfd29e request completed status=200 path=/v1/orders duration_ms=1393
+2026-11-10T08:23:22.799Z INFO  [search] req=bb7c38697d72 cache hit key=user:13919 ttl=300
+2026-11-10T08:23:23.624Z ERROR [api] req=02a06d3ff3e9 db connection refused host=pg-primary:5432 retry=4/5
+2026-11-10T08:23:23.872Z INFO  [api] req=e7cf83200f37 job finished queue=emails processed=42866
+2026-11-10T08:23:24.229Z INFO  [auth] req=58494fcd04f7 request completed status=200 path=/v1/orders duration_ms=3499
+2026-11-10T08:23:24.438Z INFO  [search] req=59baad863eec request completed status=200 path=/v1/orders duration_ms=3262
+2026-11-10T08:23:24.914Z INFO  [billing] req=1ca64eb265ea job finished queue=emails processed=93257
+2026-11-10T08:23:25.293Z DEBUG [worker] req=0ac7fea7dd8b feature flag evaluated flag=new_checkout user=3089 value=false
+2026-11-10T08:23:25.988Z WARN  [auth] req=87651e636bb8 slow query table=orders duration_ms=3249 rows=59887
+2026-11-10T08:23:26.457Z INFO  [auth] req=aadb652fae19 request completed status=200 path=/v1/orders duration_ms=1217
+2026-11-10T08:23:27.049Z ERROR [worker] req=7909e977fd76 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:23:27.107Z INFO  [billing] req=7c7af6be8105 job finished queue=emails processed=50048
+2026-11-10T08:23:27.909Z INFO  [search] req=c459180d924c cache hit key=user:67621 ttl=300
+2026-11-10T08:23:28.216Z INFO  [auth] req=f884a7d10fc7 request completed status=200 path=/v1/orders duration_ms=3335
+2026-11-10T08:23:28.949Z INFO  [billing] req=a61bfc6ff7cc cache hit key=user:28480 ttl=300
+2026-11-10T08:23:29.231Z INFO  [auth] req=4beaf9fc67d1 cache hit key=user:78410 ttl=300
+2026-11-10T08:23:30.032Z INFO  [search] req=cb759aebc4bb request completed status=200 path=/v1/orders duration_ms=2328
+2026-11-10T08:23:30.926Z WARN  [api] req=ecaf11adc4cd slow query table=orders duration_ms=3024 rows=87288
+2026-11-10T08:23:31.084Z INFO  [worker] req=3aa84c767215 cache hit key=user:99651 ttl=300
+2026-11-10T08:23:31.296Z INFO  [worker] req=223e064bf1b7 cache hit key=user:73494 ttl=300
+2026-11-10T08:23:31.794Z INFO  [search] req=bad00bd93192 request completed status=200 path=/v1/orders duration_ms=3720
+2026-11-10T08:23:32.372Z INFO  [api] req=4aec31fa8779 request completed status=200 path=/v1/orders duration_ms=1522
+2026-11-10T08:23:32.634Z DEBUG [search] req=a52f6b83bb62 feature flag evaluated flag=new_checkout user=82795 value=false
+2026-11-10T08:23:33.488Z INFO  [worker] req=f786f1ef5aee request completed status=200 path=/v1/orders duration_ms=1408
+2026-11-10T08:23:34.327Z INFO  [api] req=e03dffddf79c request completed status=200 path=/v1/orders duration_ms=3570
+2026-11-10T08:23:34.918Z INFO  [api] req=8a5a724c5959 job finished queue=emails processed=25703
+2026-11-10T08:23:35.129Z ERROR [api] req=1ae059fa7a06 db connection refused host=pg-primary:5432 retry=3/5
+2026-11-10T08:23:35.214Z INFO  [worker] req=1b607dd3df6c request completed status=200 path=/v1/orders duration_ms=2510
+2026-11-10T08:23:35.709Z INFO  [search] req=6223ee66f3d8 job finished queue=emails processed=32667
+2026-11-10T08:23:36.580Z INFO  [search] req=0e8ebb46fe03 cache hit key=user:65024 ttl=300
+2026-11-10T08:23:37.278Z INFO  [search] req=03371f2e59a0 job finished queue=emails processed=99709
+2026-11-10T08:23:37.884Z INFO  [worker] req=c3f868562445 request completed status=200 path=/v1/orders duration_ms=928
+2026-11-10T08:23:37.986Z INFO  [worker] req=06ccbb8566c5 cache hit key=user:31268 ttl=300
+2026-11-10T08:23:38.509Z INFO  [search] req=fdc6378e94e9 request completed status=200 path=/v1/orders duration_ms=1599
+2026-11-10T08:23:39.398Z ERROR [api] req=e5dbc2f341e5 payment webhook timeout provider=stripe after_ms=2591
+2026-11-10T08:23:40.049Z INFO  [worker] req=af9927d79cf4 request completed status=200 path=/v1/orders duration_ms=922
+2026-11-10T08:23:40.543Z WARN  [worker] req=51b94711ebd6 slow query table=orders duration_ms=577 rows=28568
+2026-11-10T08:23:40.918Z INFO  [auth] req=02f35f794d42 request completed status=200 path=/v1/orders duration_ms=3554
+2026-11-10T08:23:41.337Z INFO  [billing] req=42188be9e34d job finished queue=emails processed=22754
+2026-11-10T08:23:41.627Z INFO  [worker] req=57e6b1e0b8cd request completed status=200 path=/v1/orders duration_ms=495
+2026-11-10T08:23:41.920Z INFO  [search] req=e2825982cb4c request completed status=200 path=/v1/orders duration_ms=2322
+2026-11-10T08:23:42.579Z INFO  [search] req=01fd2694c1de request completed status=200 path=/v1/orders duration_ms=3717
+2026-11-10T08:23:43.459Z INFO  [auth] req=97e6aa08c91b request completed status=200 path=/v1/orders duration_ms=3746

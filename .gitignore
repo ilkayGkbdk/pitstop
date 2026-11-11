@@ -3,3 +3,4 @@
 .claude-plugin/types/
 plugins/*/.claude-plugin/types/
 launch/
+!demo/project/logs/*.log
